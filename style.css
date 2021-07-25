@@ -1,0 +1,179 @@
+:root {
+  --bg-dark: #030303;
+  --dark-red: #710707;
+  --font-white: #FFFFFF;
+  --font-gold: #9d8665;
+  --font1: 22px;
+  --font2: 32px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 75px 0;
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+}
+
+.color-white {
+  color: var(--font-white);
+}
+
+.color-gold {
+  color: var(--font-gold);
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+  background-color: #710707;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 40px 0 40px;
+  margin: 0 auto;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding-bottom: 150px;
+}
+
+.logo { 
+  position: relative;
+  width: 50px;
+  height: 34px;
+  background-image: url("./assets/svg/logo.svg");
+  background-repeat: no-repeat;
+  color: var(--font-white); 
+}
+
+
+.text-logo {
+  position: absolute;
+  left: 60px;
+  bottom: -6px; 
+  
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  line-height: 1.78;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.nav {
+  max-width: 720px; 
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.nav-link {
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--font1);
+  color: var(--font-white);
+  line-height: 2.27;
+  letter-spacing: 2px;
+  font-weight: 100;
+  transition: color .2s linear;
+}
+
+.nav-link:hover {
+  color: var(--font-gold);
+}
+
+/* Welcome */
+
+.welcome {
+  padding-top: 150px;
+  background-image: url("./assets/background.jpg");
+  background-repeat: no-repeat;
+  background-position: calc(100% + 400px) calc(100% + 30px);
+  background-size: contain;
+  height: 750px;
+
+  background-color: var(--bg-dark);
+  color: var(--font-white);
+
+}
+
+.section-title {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+}
+
+.welcome-subtitle {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.14;
+  letter-spacing: 2px;
+}
+
+.discover-btn {
+  width: 360px;
+  height: 75px;
+
+  background-color: var(--dark-red);
+  border: 0;
+  border-radius: 10px;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 100;
+  color: var(--font-white);
+
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+.discover-btn:hover {
+  background-color: var(--font-gold);
+}
