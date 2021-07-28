@@ -518,3 +518,24 @@ section {
   color: var(--font-white);
   border: 2px solid #fff;
 }
+
+/* contacts */
+
+.contacts-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0;
+}
+
+.contact-name {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.17;
+}
+
+.contact-item {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.17;
+  margin: 25px 0;
+}
