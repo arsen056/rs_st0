@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;700&display=swap"
         rel="stylesheet">
     <title>Museum</title>
 </head>
@@ -41,6 +41,7 @@
                 <button class="discover-btn">Discover the Louvre</button>
             </div>
         </section>
+
         <section class="virtual-tour">
             <div class="container">
                 <h2 class="section-title color-gold underline">Virtual tour</h2>
@@ -93,7 +94,8 @@
                             <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish
                                 Golden
                                 Age.<br><br></p>
-                            <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the
+                            <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered
+                                since the
                                 previous
                                 restoration in the 19th century.<br><br></p>
                             <p>The cleaning provoked furious protests, not because the picture had been damaged in any
@@ -102,12 +104,103 @@
                         </div>
                     </div>
 
-                    <div class="explore-column"><img class="explore-img" src="./assets/img/explore.jpg"
-                            alt="Explore picture"></div>
+                    <div class="explore-column">
+                        <img class="explore-img" src="./assets/img/explore.jpg" alt="Explore picture">
+                    </div>
                 </div>
 
             </div>
 
+        </section>
+
+        <section class="video-section">
+            <div class="container">
+                <div class="video-box">
+                    <video class="video" src="#" poster="assets/img/video-poster.jpg">
+                    </video>
+
+                    <div class="controls">
+                        <div class="buttons-video">
+                            <button class="back-btn" id="play-pause"></button>
+                            <button class="play-pause" id="play-pause"></button>
+                            <button class="next-btn" id="play-pause"></button>
+                        </div>
+                        <input class="video-progress" type="range" value="40" min="0" max="100" step="1">
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+        <section class="tickets">
+            <div class="container">
+                <h2 class="section-title color-white underline-tickets">Buy tickets</h2>
+                <div class="ticket-box">
+                    <div class="tickets-img"><img src="./assets/img/ticket.jpg" alt="ticket"></div>
+                    <form class="ticket-amount" method="POST" action="#">
+                        <div class="radio-btn-container">
+                            <h2 class="title-radio">Ticket Type</h2>
+                            <label class="label-radio" for="permanent-exhibition">
+                                <input class="radio-btn" type="radio" id="permanent-exhibition" name="exhibition"
+                                    value="permanent">
+                                <span class="radio-fake"></span>
+                                Permanent exhibition
+                            </label>
+
+                            <label class="label-radio" for="temporary-exhibition">
+                                <input class="radio-btn" type="radio" id="temporary-exhibition" name="exhibition"
+                                    value="temporary">
+                                <span class="radio-fake"></span>
+                                Temporary exhibition
+                            </label>
+
+                            <label class="label-radio" for="combined-exhibition">
+                                <input class="radio-btn" type="radio" id="combined-exhibition" name="exhibition"
+                                    value="combined">
+                                <span class="radio-fake"></span>
+                                Combined Admission
+                            </label>
+                        </div>
+                        <div class="amount-container">
+                            <h2 class="title-radio">Amount</h2>
+
+                            <div class="ticket-counter-box">
+                                <h3 class="calc-title">Basic 18+</h3>
+                                <div class="ticket-counter">
+                                    <button class="amount-btn" type="button"
+                                        onclick="this.nextElementSibling.stepDown()">
+                                        <div class="minus-amount-btn"></div>
+                                    </button>
+                                    <input class="amount-number" type="number" min="0" max="100" value="1" readonly>
+                                    <button class="amount-btn" type="button"
+                                        onclick="this.previousElementSibling.stepUp()">+</button>
+                                </div>
+                            </div>
+
+                            <div class="ticket-counter-box">
+                                <h3 class="calc-title">Senior 65+</h3>
+                                <div class="ticket-counter">
+                                    <button class="amount-btn" type="button"
+                                        onclick="this.nextElementSibling.stepDown()">
+                                        <div class="minus-amount-btn"></div>
+                                    </button>
+                                    <input class="amount-number" type="number" min="0" max="100" value="1" readonly>
+                                    <button class="amount-btn" type="button"
+                                        onclick="this.previousElementSibling.stepUp()">+</button>
+                                </div>
+                            </div>
+
+                            <span class="total-amount">Total € 220</span>
+                            <div><button class="buy-now">Buy now</button></div>
+
+
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
         </section>
     </main>
 </body>
