@@ -392,6 +392,10 @@ section {
   height: 30px;
 }
 
+.sound-btn:hover {
+  filter: invert(67%) sepia(0%) saturate(0%) hue-rotate(55deg) brightness(91%) contrast(88%);
+}
+
 .full-screen-btn {
   border: 0;
   outline: 0;
@@ -401,6 +405,11 @@ section {
 
   width: 36px;
   height: 36px;
+  transition: 0.2s;
+}
+
+.full-screen-btn:hover {
+  filter: invert(67%) sepia(0%) saturate(0%) hue-rotate(55deg) brightness(91%) contrast(88%);
 }
 
 .video-progress {
@@ -726,6 +735,14 @@ section {
   opacity: 0.8;
   border-color: var(--font-gold);
   filter: invert(59%) sepia(13%) saturate(909%) hue-rotate(356deg) brightness(90%) contrast(84%);
+}
+
+.social-item a {.
+  position: absolute;
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
 }
 
 .icon-svg {
