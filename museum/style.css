@@ -392,6 +392,10 @@ section {
   height: 30px;
 }
 
+.sound-btn:hover {
+  filter: invert(67%) sepia(0%) saturate(0%) hue-rotate(55deg) brightness(91%) contrast(88%);
+}
+
 .full-screen-btn {
   border: 0;
   outline: 0;
@@ -401,6 +405,11 @@ section {
 
   width: 36px;
   height: 36px;
+  transition: 0.2s;
+}
+
+.full-screen-btn:hover {
+  filter: invert(67%) sepia(0%) saturate(0%) hue-rotate(55deg) brightness(91%) contrast(88%);
 }
 
 .video-progress {
