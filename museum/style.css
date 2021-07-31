@@ -5,7 +5,8 @@
   --font-gold: #9d8665;
   --font-dark: #000000;
   --font1: 22px;
-  --font2: 32px;
+  --font2: 28px;
+  --font3: 32px;
 }
 
 * {
@@ -41,13 +42,8 @@ body {
   padding: 0;
 }
 
-main {
-
-}
-
 section {
   padding: 50px 0 34px 0;
-
 }
 
 .bg-dark {
@@ -113,7 +109,7 @@ section {
   
   font-family: 'Forum', sans-serif;
   font-weight: 400;
-  font-size: 28px;
+  font-size: var(--font2);
   line-height: 1.78;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -156,7 +152,6 @@ section {
 
   background-color: var(--bg-dark);
   color: var(--font-white);
-
 }
 
 .section-title {
@@ -169,7 +164,7 @@ section {
 }
 
 .welcome-subtitle {
-  font-size: 28px;
+  font-size: var(--font2);
   font-weight: 300;
   line-height: 1.14;
   letter-spacing: 2px;
@@ -185,7 +180,7 @@ section {
   border-radius: 10px;
 
   font-family: 'Roboto', sans-serif;
-  font-size: 22px;
+  font-size: var(--font1);
   font-weight: 100;
   letter-spacing: 2px;
   color: var(--font-white);
@@ -220,7 +215,7 @@ section {
 .card-title {
   position: relative;
   font-family: Forum;
-  font-size: 32px;
+  font-size: var(--font3);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 5px;
@@ -246,7 +241,7 @@ section {
 }
 
 .card-desc {
-  font-size: 22px;
+  font-size: var(--font1);
   font-weight: 100;
   line-height: 1.5;
   color: var(--font-dark);
@@ -282,7 +277,7 @@ section {
 
 .explore-text {
   max-width: 670px;
-  font-size: 22px;
+  font-size: var(--font1);
   font-weight: 300;
   line-height: 1.75;
   margin: 105px 0 100px 0;  
@@ -460,10 +455,9 @@ section {
 }
 
 .video-desc {
-  font-size: 22px;
+  font-size: var(--font1);
   font-weight: 300;
   line-height: 1.73;
-
 }
 
 /* tickets */
@@ -506,7 +500,7 @@ section {
 }
 
 .title-radio {
-  font-size: 28px;
+  font-size: var(--font2);
   font-weight: 700;
   line-height: 1.1;
   margin-left: 60px;
@@ -523,7 +517,7 @@ section {
   align-items: center;
   margin: 26px 0 10px 60px;
 
-  font-size: 22px;
+  font-size: var(--font1);
   font-weight: 300;
   line-height: 1.7;
   cursor: pointer;
@@ -568,12 +562,11 @@ section {
 }
 
 .title-count {
-  font-size: 28px;
+  font-size: var(--font2);
   font-weight: 700;
   line-height: 1.1;
   margin-left: 60px;
   padding-top: 5px;
-
 }
 
 .ticket-counter-box {
@@ -581,7 +574,7 @@ section {
 }
 
 .calc-title {
-  font-size: 22px;
+  font-size: var(--font1);
   font-weight: 300;
   line-height: 1.17;
   margin: 15px 0;
@@ -619,13 +612,13 @@ section {
   background: none;
   border: 0;
   outline: 0;
-  font-size: 22px;
+  font-size: var(--font1);
   font-weight: 300;
   color: #fff;
 }
 
 .total-amount {
-  font-size: 28px;
+  font-size: var(--font2);
   font-weight: 700;
   line-height: 1.17;
   margin: 29px 0;
@@ -636,7 +629,7 @@ section {
   width: 175px;
   height: 50px;
 
-  font-size: 22px;
+  font-size: var(--font1);
   font-weight: 300;
   line-height: 1.17;
   letter-spacing: 2px;
@@ -670,7 +663,7 @@ section {
 }
 
 .contact-name {
-  font-size: 28px;
+  font-size: var(--font2);
   font-weight: 500;
   line-height: 1.17;
 }
@@ -680,7 +673,7 @@ section {
 }
 
 .contact-item {
-  font-size: 22px;
+  font-size: var(--font1);
   font-weight: 300;
   line-height: 1.17;
   margin: 23px 0;
