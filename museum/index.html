@@ -121,9 +121,9 @@
                     <button class="play-video"></button>
                     <div class="controls">
                         <div class="buttons-video">
-                            <button class="back-btn" id="play-pause"></button>
+                            <button class="back-btn" id="back-btn"></button>
                             <button class="play-pause" id="play-pause"></button>
-                            <button class="next-btn" id="play-pause"></button>
+                            <button class="next-btn" id="next-btn"></button>
                             <input class="video-progress" type="range" value="47" min="0" max="100" step="1">
                             <div class="sound-group">
                                 <button class="sound-btn"></button>
@@ -181,7 +181,7 @@
                                 <div class="ticket-counter">
                                     <button class="amount-btn" type="button"
                                         onclick="this.nextElementSibling.stepDown()">
-                                        <div class="minus-amount-btn"></div>
+                                        <span class="minus-amount-btn"></span>
                                     </button>
                                     <input class="amount-number" type="number" min="0" max="100" value="1" readonly>
                                     <button class="amount-btn" type="button"
@@ -194,7 +194,7 @@
                                 <div class="ticket-counter">
                                     <button class="amount-btn" type="button"
                                         onclick="this.nextElementSibling.stepDown()">
-                                        <div class="minus-amount-btn"></div>
+                                        <span class="minus-amount-btn"></span>
                                     </button>
                                     <input class="amount-number" type="number" min="0" max="100" value="1" readonly>
                                     <button class="amount-btn" type="button"
@@ -231,12 +231,11 @@
         <div class="container">
             <div class="footer-row">
                 <a class="home-link" href="#home">
-                    <div class="logo" id="home">
+                    <div class="logo">
                         <div class="logo-svg"></div>
                         <span class="text-logo">Louvre</span>
                     </div>
                 </a>
-
 
                 <nav class="nav-list-column">
                     <ul class="nav-list-footer">
