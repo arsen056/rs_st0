@@ -731,7 +731,7 @@ section {
 
 .social-item:hover {
   opacity: 0.8;
-  background-color: var(--font-gold);
+  border-color: var(--font-gold);
   filter: invert(59%) sepia(13%) saturate(909%) hue-rotate(356deg) brightness(90%) contrast(84%);
 }
 

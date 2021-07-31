@@ -14,12 +14,12 @@
 </head>
 
 <body>
-    <header class="header bg-dark">
+    <header class="header bg-dark" id="home">
         <div class="container">
             <div class="header-box">
                 <div class="logo">
                     <div class="logo-svg"></div>
-                    <span class="text-logo">Louvre</span>
+                    <h1 class="text-logo">Louvre</h1>
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
@@ -34,7 +34,7 @@
         </div>
     </header>
     <main class="main">
-        <section class="welcome">
+        <section class="welcome" id="welcome">
             <div class="container">
                 <h2 class="section-title color-white">Welcome<br> to the Louvre</h2>
                 <p class="welcome-subtitle">From the castle to the museum</p>
@@ -143,6 +143,7 @@
                 </div>
             </div>
         </section>
+
         <section class="tickets" id="tickets">
             <div class="container">
                 <h2 class="section-title color-white underline-tickets">Buy tickets</h2>
@@ -220,7 +221,7 @@
                             <li class="contact-item"><span>mail: info@louvre.fr</span></li>
                         </ul>
                     </div>
-                    <img src="./assets/img/contact-map.jpg" alt="map">
+                    <img src="./assets/img/contact-map.png" alt="map">
                 </div>
 
             </div>
@@ -229,21 +230,24 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-row">
-                <div class="logo">
-                    <div class="logo-svg"></div>
-                    <span class="text-logo">Louvre</span>
-                </div>
+                <a class="home-link" href="#home">
+                    <div class="logo" id="home">
+                        <div class="logo-svg"></div>
+                        <span class="text-logo">Louvre</span>
+                    </div>
+                </a>
+
 
                 <nav class="nav-list-column">
                     <ul class="nav-list-footer">
-                        <li><a class="nav-link" href="#">Welcome</a></li>
-                        <li><a class="nav-link" href="#">Visiting</a></li>
-                        <li><a class="nav-link" href="#">Explore</a></li>
+                        <li><a class="nav-link" href="#welcome">Welcome</a></li>
+                        <li><a class="nav-link" href="#virtual-tour">Visiting</a></li>
+                        <li><a class="nav-link" href="#explore">Explore</a></li>
                     </ul>
                     <ul class="nav-list-footer">
-                        <li><a class="nav-link" href="#">Video</a></li>
-                        <li><a class="nav-link" href="#">Tickets</a></li>
-                        <li><a class="nav-link" href="#">Contacts</a></li>
+                        <li><a class="nav-link" href="#video-section">Video</a></li>
+                        <li><a class="nav-link" href="#tickets">Tickets</a></li>
+                        <li><a class="nav-link" href="#contacts">Contacts</a></li>
                     </ul>
                 </nav>
                 <div class="social-icon">
