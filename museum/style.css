@@ -728,6 +728,14 @@ section {
   filter: invert(59%) sepia(13%) saturate(909%) hue-rotate(356deg) brightness(90%) contrast(84%);
 }
 
+.social-item a {.
+  position: absolute;
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
 .icon-svg {
   position: absolute;
   top: 50%;
