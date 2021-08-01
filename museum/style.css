@@ -148,7 +148,7 @@ section {
 .welcome {
   padding-top: 42px;
   padding-bottom: 246px;
-  background-image: url("./assets/background.jpg");
+  background-image: url("./assets/main/background.jpg");
   background-repeat: no-repeat;
   background-position: calc(65% + 250px) calc(147% + 35px);
 
@@ -714,12 +714,12 @@ section {
 .footer-row {
   position: relative;
   display: flex;
-  padding-top: 84px;
+  padding-top: 86px;
 }
 
 .nav-list-column {
   display: flex;
-  gap: 155px;
+  gap: 156px;
   margin-left: 290px;
 }
 
