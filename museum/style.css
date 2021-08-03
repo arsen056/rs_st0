@@ -150,7 +150,7 @@ section {
   padding-bottom: 246px;
   background-image: url("./assets/main/background.jpg");
   background-repeat: no-repeat;
-  background-position: calc(65% + 250px) calc(147% + 35px);
+  background-position: calc(50% + 352px) 100%;
 
 
   background-color: var(--bg-dark);
@@ -240,7 +240,7 @@ section {
   transition: 0.5s;
 }
 
-.card-title:hover::after {
+.card-item:hover .card-title::after {
   width: 100%;
 }
 
