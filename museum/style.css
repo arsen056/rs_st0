@@ -337,6 +337,7 @@ section {
 
   width: 220px;
   height: 220px;
+  transition: 0.2s;
 }
 
 .controls {
@@ -367,6 +368,7 @@ section {
   width: 23px;
   height: 30px;
   margin-left: 4px;
+  transition: 0.2s;
 }
 
 .back-btn {
@@ -377,7 +379,9 @@ section {
   background-color: transparent;
   width: 26px;
   height: 30px;
+  transition: 0.2s;
 }
+
 
 .next-btn {
   border: 0;
@@ -388,6 +392,7 @@ section {
 
   width: 26px;
   height: 30px;
+  transition: 0.2s;
 }
 
 .sound-btn {
@@ -399,9 +404,10 @@ section {
 
   width: 37px;
   height: 30px;
+  transition: 0.2s;
 }
 
-.sound-btn:hover {
+.sound-btn:hover, .back-btn:hover, .full-screen-btn:hover, .next-btn:hover, .play-pause:hover, .play-video:hover {
   filter: invert(67%) sepia(0%) saturate(0%) hue-rotate(55deg) brightness(91%) contrast(88%);
 }
 
@@ -415,10 +421,6 @@ section {
   width: 36px;
   height: 36px;
   transition: 0.2s;
-}
-
-.full-screen-btn:hover {
-  filter: invert(67%) sepia(0%) saturate(0%) hue-rotate(55deg) brightness(91%) contrast(88%);
 }
 
 .video-progress {
