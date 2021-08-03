@@ -240,7 +240,7 @@ section {
   transition: 0.5s;
 }
 
-.card-title:hover::after {
+.card-item:hover .card-title::after {
   width: 100%;
 }
 
