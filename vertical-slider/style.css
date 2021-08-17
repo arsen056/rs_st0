@@ -26,6 +26,10 @@ body {
   left: 0;
 }
 
+.left-slide.shift {
+  transition: transform 0.5s ease-in-out;
+}
+
 .left-slide > div {
   height: 100%;
   width: 100%;
@@ -48,6 +52,10 @@ body {
   top: 0;
   left: 35%;
   width: 65%;
+}
+
+.main-slide.shift  {
+  transition: transform 0.5s ease-in-out;
 }
 
 .main-slide > div {
