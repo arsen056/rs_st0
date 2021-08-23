@@ -1,3 +1,7 @@
+console.log("Разобраться в чужом коде - 10 баллов");
+console.log("Бесконечный слайдер - 10 баллов");
+console.log("Пролистывание слайдера колёсиком мышки - 10 баллов");
+
 const container = document.querySelector('.container');
 const mainSlide = document.querySelector('.main-slide');
 const leftSlide = document.querySelector('.left-slide');
