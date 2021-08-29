@@ -1,3 +1,5 @@
+*:focus{outline:none}
+
 .container {
   width: 1440px;
   margin: 0 auto;
@@ -69,7 +71,7 @@
   
   .play-pause { 
     border: 0;
-    outline: 0;
+    outline: none;
     cursor: pointer;
     background-image: url("./svg/play-button.svg");
     background-repeat: no-repeat;
@@ -78,12 +80,16 @@
     height: 30px;
     margin-left: 4px;
     transition: 0.2s;
-    filter: invert(71%) sepia(0%) saturate(348%) hue-rotate(198deg) brightness(100%) contrast(97%);
+    filter: invert(71%) sepia(0%) saturate(348%) hue-rotate(198deg) brightness(100%) contrast(97%); 
+  }
+
+  .play-pause:focus {
+    outline: none;
   }
   
   .back-btn {
     border: 0;
-    outline: 0;
+    outline: none;
     cursor: pointer;
     background-image: url("./svg/back.svg");
     background-color: transparent;

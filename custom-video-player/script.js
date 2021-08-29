@@ -8,6 +8,7 @@ const soundProgress = player.querySelector('.sound-progress');
 const soundBtn = player.querySelector('.sound-btn');
 const fullScreen = player.querySelector('.full-screen-btn');
 let isMuted = true;
+let keyDownFlag = true;
 
 function changePlay() {
   if (video.paused) {
@@ -15,15 +16,14 @@ function changePlay() {
   } else {
     video.pause();
   }
+  playPause.blur();
 }
 
 function updateBtn() {
   if (this.paused) {
     playPause.style.background = 'url("./svg/play-button.svg")';
-    console.log('pause')
   } else {
-   playPause.style.background = 'url("./svg/pause.svg")';
-   console.log('play')
+    playPause.style.background = 'url("./svg/pause.svg")';
   }
 }
 
@@ -83,6 +83,42 @@ function enterFS() {
   } else {
     document.exitFullscreen();
   }
+  fullScreen.blur();
+}
+
+function speedUp() {
+  video.play();
+  video.playbackRate += 0.5;
+}
+
+function speedDown() {
+  video.play();
+  if (video.playbackRate != 0.5) {
+    video.playbackRate -= 0.5;
+  }  
+}
+
+function keyDown(event) {
+    if (event.code == "Space" && keyDownFlag) {
+      changePlay();
+      keyDownFlag = false;
+    } else if (event.code == "KeyM" && keyDownFlag) {
+      changeMute();
+      keyDownFlag = false;
+    } else if (event.code == "KeyF" && keyDownFlag) {
+      enterFS();
+      keyDownFlag = false;
+    } else if (event.code == "Period" && keyDownFlag) {
+      speedUp();
+      keyDownFlag = false;
+    } else if (event.code == "Comma" && keyDownFlag) {
+      speedDown();
+      keyDownFlag = false;
+    }
+}
+
+function keyUp(event) {
+  keyDownFlag = true;
 }
 
 video.addEventListener('click', changePlay);
@@ -97,3 +133,5 @@ soundProgress.addEventListener('input', moveProgress);
 soundProgress.addEventListener('input', videoVolume);
 videoProgress.addEventListener('click', scrub);
 fullScreen.addEventListener('click', enterFS);
+document.addEventListener('keydown', keyDown);
+document.addEventListener('keyup', keyUp);
