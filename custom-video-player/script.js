@@ -8,7 +8,7 @@ const soundProgress = player.querySelector('.sound-progress');
 const soundBtn = player.querySelector('.sound-btn');
 const fullScreen = player.querySelector('.full-screen-btn');
 let isMuted = true;
-let keyDownFlag = true;
+let keyDownFlag = true; let keyFlag = false;
 
 function changePlay() {
   if (video.paused) {
@@ -88,37 +88,44 @@ function enterFS() {
 
 function speedUp() {
   video.play();
-  video.playbackRate += 0.5;
+  if (video.playbackRate != 2) {
+    video.playbackRate += 0.25;
+    console.log("speed: " + video.playbackRate)
+  }  
 }
 
 function speedDown() {
   video.play();
-  if (video.playbackRate != 0.5) {
-    video.playbackRate -= 0.5;
+  if (video.playbackRate != 0.25) {
+    video.playbackRate -= 0.25;
+    console.log("speed: " + video.playbackRate)
   }  
 }
 
 function keyDown(event) {
     if (event.code == "Space" && keyDownFlag) {
       changePlay();
-      keyDownFlag = false;
+      keyDownFlag = false;  
     } else if (event.code == "KeyM" && keyDownFlag) {
       changeMute();
       keyDownFlag = false;
     } else if (event.code == "KeyF" && keyDownFlag) {
       enterFS();
       keyDownFlag = false;
-    } else if (event.code == "Period" && keyDownFlag) {
-      speedUp();
-      keyDownFlag = false;
-    } else if (event.code == "Comma" && keyDownFlag) {
-      speedDown();
-      keyDownFlag = false;
+    } else if (event.code == "ShiftLeft") {
+        keyFlag = true;       
+        document.onkeyup = function(event) {
+          if (event.code == "Period" && keyFlag) {
+            speedUp();                   
+          } else if (event.code == "Comma" && keyFlag) {
+            speedDown();            
+          }
+        }
     }
-}
+  }
 
 function keyUp(event) {
-  keyDownFlag = true;
+  keyDownFlag = true; 
 }
 
 video.addEventListener('click', changePlay);
