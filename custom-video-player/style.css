@@ -1,0 +1,200 @@
+*:focus{outline:none}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.video-section {
+  padding-bottom: 77px;
+}
+  
+.video-box {
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
+  height: 714px;
+  margin-bottom: 40px;
+  padding-top: 41px;
+}  
+
+.video {
+  background-color: #767676;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
+.play-video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-image: url("./svg/play-video.svg");
+  background-color: transparent;
+  
+  width: 220px;
+  height: 220px;
+  transition: 0.2s;
+  display: none;
+}
+
+  .play-video:focus {
+    display: none;
+  }
+
+  .play-video.hide {
+    visibility: hidden;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    position: absolute;  
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: black;
+    justify-content: center;
+  }
+  
+  .buttons-video {
+    display: flex;
+    align-items: center;  
+    gap: 40px;
+    margin: 0 40px;
+  }
+
+  
+  .play-pause { 
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-image: url("./svg/play-button.svg");
+    background-repeat: no-repeat;
+    background-color: transparent; 
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
+    transition: 0.2s;
+    filter: invert(71%) sepia(0%) saturate(348%) hue-rotate(198deg) brightness(100%) contrast(97%); 
+  }
+
+  .play-pause:focus {
+    outline: none;
+  }
+  
+  .back-btn {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-image: url("./svg/back.svg");
+    background-color: transparent;
+    width: 26px;
+    height: 30px;
+    transition: 0.2s;
+  } 
+  
+  .next-btn {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-image: url("./svg/next.svg");
+    background-color: transparent;
+  
+    width: 26px;
+    height: 30px;
+    transition: 0.2s;
+  }
+  
+  .sound-btn {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-image: url("./svg/volume.svg");
+    background-color: transparent;
+    filter: invert(82%) sepia(0%) saturate(6%) hue-rotate(141deg) brightness(90%) contrast(82%);
+    background-repeat: no-repeat;  
+    width: 37px;
+    height: 30px;
+    transition: 0.2s;
+    
+  }
+  
+  .sound-btn:hover, .back-btn:hover, .full-screen-btn:hover, .next-btn:hover, .play-pause:hover, .play-video:hover {
+    filter: invert(67%) sepia(0%) saturate(0%) hue-rotate(55deg) brightness(91%) contrast(88%);
+  }
+  
+  .full-screen-btn {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-image: url("./svg/full-screen.svg");
+    background-color: transparent;
+  
+    width: 36px;
+    height: 36px;
+    transition: 0.2s;
+  }
+  
+  .video-progress {
+    -webkit-appearance: none;
+    background: -webkit-linear-gradient(to right, #24809E 0%, #24809E 43%, #C4C4C4 43%, #C4C4C4 100%);
+    width: 819px;  
+    height: 8px;
+    outline: 0;
+  }
+
+  
+  .video-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: ew-resize;    
+  }
+  
+  .sound-group {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-right: 7px;
+  }
+  
+  .sound-progress {
+    -webkit-appearance: none;
+    background: -webkit-linear-gradient(left, #24809E 0%, #24809E 100%, #C4C4C4 100%, #C4C4C4 100%);
+    width: 155px;  
+    height: 8px;
+    outline: 0;
+  }
+  
+  .sound-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    cursor: ew-resize;  
+  }
+  
+  .video-info {
+    display: flex;
+    justify-content: start; 
+    align-items: center;
+    gap: 115px; 
+    padding-top: 42px;
+  }
+  
+  .video-desc {
+    font-size: var(--font1);
+    font-weight: 300;
+    line-height: 1.73;
+  }
