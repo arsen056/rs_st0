@@ -1,3 +1,6 @@
+console.log("10 баллов - Повторить исходный проект");
+console.log("10 баллов - Обязательный дополнительный фукционал. Горячие клавиши: Пробел - пауза, M - отключение/включение звука, F - полноэкранный режим, >< - ускорение/замедление видео");
+console.log("Итого: 20 баллов");
 const player = document.querySelector('.video-box');
 const video = player.querySelector('.video');
 const playVideo = player.querySelector('.play-video');
