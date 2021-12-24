@@ -1,3 +1,13 @@
-body {
-    background: #aaa;
-}
+// Normalize
+@import "base/normalize";
+
+// Abstract
+@import "abstract/constants";
+@import "abstract/mixins";
+
+// Base
+@import "base/base";
+
+// Component
+@import "component/header";
+@import "component/nav";

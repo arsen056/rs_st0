@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Portfolio</title>
 </head>
@@ -19,21 +23,24 @@
                 <li><a class="nav-link" href="#">Video</a></li>
                 <li><a class="nav-link" href="#">Price</a></li>
                 <li><a class="nav-link" href="#">Contacts</a></li>
-                <li><a class="nav-link nav-link-en" href="#">en</a> / <a class="nav-link nav-link-ru" href="#">ru</a>
+                <li><a class="nav-link nav-link-active" href="#">en</a> / <a class="nav-link nav-link-ru"
+                        href="#">ru</a>
                 </li>
             </ul>
         </nav>
-
-        <div class="header-content">
-            <h1 class="header-title">Alexa Rise</h1>
-            <p class="header-subtitle">Save sincere emotions, romantic feelings and happy moments of life together with
-                professional photographer Alexa Rise</p>
-            <button class="button">Hire me</button>
-        </div>
     </header>
 
     <main class="main">
-        <section class="skills skills-wrapper">
+        <section class="hero wrapper">
+            <div class="hero-content">
+                <h1 class="hero-title">Alexa Rise</h1>
+                <p class="hero-subtitle">Save sincere emotions, romantic feelings and<br> happy moments of life together
+                    with
+                    professional photographer Alexa Rise</p>
+                <button class="button">Hire me</button>
+            </div>
+        </section>
+        <section class="skills wrapper">
             <h2 class="section-title">Skills</h2>
             <div class="skills-card">
                 <div class="skills-card-img"></div>
@@ -64,9 +71,9 @@
             <h2 class="section-title">Portfolio</h2>
             <ul class="button-list">
                 <li><button class="button">Winter</button></li>
-                <li><button class="button button-unactive">Spring</button></li>
-                <li><button class="button button-unactive">Summer</button></li>
-                <li><button class="button button-unactive">Autumn</button></li>
+                <li><button class="button button-dark">Spring</button></li>
+                <li><button class="button button-dark">Summer</button></li>
+                <li><button class="button button-dark">Autumn</button></li>
             </ul>
 
             <div class="portfolio-images">
@@ -88,7 +95,7 @@
             </div>
         </section>
 
-        <section class="price">
+        <section class="price wrapper">
             <h2 class="section-title">Price</h2>
             <div class="price-card">
                 <h3 class="price-name">Standart</h3>

@@ -1,0 +1,39 @@
+@import "../abstract/constants";
+@import "../abstract/mixins";
+@import "../base/buttons";
+@import "../component/hero";
+
+html {
+    font-size: 10px;
+}
+
+body {    
+    font-family: 'Inter', sans-serif;
+    color: $font-white;    
+    font-size: 2rem;
+    background-color: $color-bg;
+}
+
+.wrapper {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    @include font ($size: 6rem, $weight: 700);
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+}
+
+a {
+    transition: color .2s linear;
+}
+
+a:hover {
+    color: $color-gold;    
+}

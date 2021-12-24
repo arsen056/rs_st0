@@ -1,0 +1,14 @@
+.nav {
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 33px;
+        li:nth-child(3) {
+            margin-right: 0px;
+        }
+    }
+
+    .nav-link-active {
+        color: $color-gold;
+    }
+}
