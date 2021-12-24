@@ -378,6 +378,11 @@ a {
   border: 2px solid #bdae82;
 }
 
+.button-price {
+  position: absolute;
+  bottom: 43px;
+}
+
 .hero {
   background-image: url("./assets/img/header-bg.jpg");
   background-position: center -90px;
@@ -473,6 +478,43 @@ a {
 }
 .video .video-player .video-play:hover {
   opacity: 0.5;
+}
+
+.price .price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 80px;
+}
+.price .price-wrapper .price-card {
+  position: relative;
+  border: 3px solid #bdae82;
+  width: 450px;
+  height: 505px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 23px 105px;
+}
+.price .price-wrapper .price-card span {
+  display: block;
+}
+.price .price-wrapper .price-card .price-name {
+  font-family: Merriweather;
+  font-size: 28px;
+}
+.price .price-wrapper .price-card .price-value {
+  font-family: Merriweather;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #bdae82;
+  padding: 15px 0 30px;
+}
+.price .price-wrapper .price-card .price-description {
+  font-size: 1.8rem;
+  line-height: 36px;
+  padding-bottom: 35px;
 }
 
 html {
