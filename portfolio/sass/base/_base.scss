@@ -2,6 +2,8 @@
 @import "../abstract/mixins";
 @import "../base/buttons";
 @import "../component/hero";
+@import "../component/skills";
+@import "../component/portfolio";
 
 html {
     font-size: 10px;
@@ -29,6 +31,36 @@ h1 {
 h2 {
     font-family: 'Merriweather', serif;
 }
+
+.section-title {   
+    padding-top: 77px;
+    overflow: hidden;     
+    font-size: 40px;
+    font-weight: 700;    
+    color: $color-gold;
+    text-align: center;
+    background: #000;
+    margin: 0 auto;
+
+    &::after, &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle; 
+        width: 275px;
+        height: 2px;
+        background-color: $color-gold;   
+        border: solid #000;
+        border-width: 0 20px;     
+    }   
+
+    &::after {
+        margin-right: -100%;
+    }
+    &::before {
+        margin-left: -100%;
+    }
+}
+
 
 a {
     transition: color .2s linear;
