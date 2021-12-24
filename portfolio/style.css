@@ -455,6 +455,26 @@ a {
   gap: 25px;
 }
 
+.video .video-player {
+  padding-top: 76px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video .video-player .video-play {
+  background-image: url("./assets/svg/play.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  transition: opacity 0.2s linear;
+}
+.video .video-player .video-play:hover {
+  opacity: 0.5;
+}
+
 html {
   font-size: 10px;
 }
