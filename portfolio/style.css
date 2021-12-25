@@ -462,7 +462,7 @@ a {
   text-align: center;
   margin-top: 78px;
 }
-.skills-card h3 {
+.skills-card h4 {
   font-size: 20px;
   padding-top: 88px;
 }
@@ -514,6 +514,8 @@ a {
   position: absolute;
   width: 130px;
   height: 130px;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   transition: opacity 0.2s linear;
 }
@@ -587,6 +589,7 @@ a {
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
