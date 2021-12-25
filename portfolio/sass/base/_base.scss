@@ -6,6 +6,7 @@
 @import "../component/portfolio";
 @import "../component/video";
 @import "../component/price";
+@import "../component/contact";
 
 html {
     font-size: 10px;
@@ -32,6 +33,22 @@ h1 {
 
 h2 {
     font-family: 'Merriweather', serif;
+}
+
+input, textarea {    
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid $color-gold;
+    padding-left: 20px;    
+    color: $font-white;
+    &::placeholder {
+        font-family: inherit;
+        color: $color-gold;
+        font-size: 2rem;
+    } 
+    &:focus {
+        outline: 0;
+    }
 }
 
 .section-title {   
@@ -63,6 +80,16 @@ h2 {
     }
 }
 
+.no-lines {    
+    text-align: right;
+    background: transparent;
+    padding-top: 69px;
+    padding-bottom: 55px;
+    padding-right: 223px;
+    &::after, &::before {
+        display: none;
+    }
+}
 
 a {
     transition: color .2s linear;

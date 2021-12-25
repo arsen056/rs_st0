@@ -1,0 +1,33 @@
+.contact {
+    .container {
+        background-image: url("./assets/img/contact-bg.jpg");        
+        background-size: auto 700px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin-top: 68px;
+    }
+
+    .contact-wrapper {
+        display: flex;
+        justify-content: end;
+        padding-bottom: 185px;
+    }
+}
+
+.contact-form {    
+    input, textarea {        
+        width: 450px;
+        height: 50px;
+        margin-bottom: 20px;  
+    }
+
+    textarea {
+        padding-top: 10px;    
+        margin-bottom: 30px; 
+        resize: none;   
+    }
+     
+    .input-text {
+        height: 100px;
+    }
+}
