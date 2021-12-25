@@ -411,6 +411,9 @@ a {
   background-repeat: no-repeat;
   background-position: center;
 }
+.footer .social-list a:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
 .footer .social-list li:nth-child(1) a {
   background-image: url("./assets/svg/inst.svg");
 }
