@@ -383,6 +383,47 @@ a {
   bottom: 43px;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 131px;
+  font-style: normal;
+}
+.footer .git span {
+  padding: 0 14px;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.footer .rs {
+  margin-left: 25px;
+}
+.footer .social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+.footer .social-list a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footer .social-list li:nth-child(1) a {
+  background-image: url("./assets/svg/inst.svg");
+}
+.footer .social-list li:nth-child(2) a {
+  background-image: url("./assets/svg/fb.svg");
+}
+.footer .social-list li:nth-child(3) a {
+  background-image: url("./assets/svg/tw.svg");
+}
+.footer .social-list li:nth-child(4) a {
+  background-image: url("./assets/svg/pinterest.svg");
+}
+
 .hero {
   background-image: url("./assets/img/header-bg.jpg");
   background-position: center -90px;
