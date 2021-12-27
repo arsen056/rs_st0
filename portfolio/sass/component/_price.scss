@@ -42,3 +42,9 @@
         }
     }
 }
+
+@media (max-width: $tablet-width) {
+    .price-wrapper {
+        flex-direction: column;
+    }
+}

@@ -3,12 +3,21 @@
         display: flex;
         justify-content: space-between;
         column-gap: 33px;
-        li:nth-child(3) {
-            margin-right: 0px;
-        }
     }
 
     .nav-link-active {
         color: $color-gold;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .nav-list {
+        li {
+            display: none;
+        }
+        
+        li:last-child {
+            display: block;
+        }
     }
 }

@@ -23,3 +23,11 @@
         }
     }
 } 
+
+@media (max-width: $tablet-width) {
+    .video-player {
+        img {
+            width: 768px;
+        }
+    }
+}

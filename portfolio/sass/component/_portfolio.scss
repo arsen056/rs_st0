@@ -14,3 +14,9 @@
     }
 }
 
+@media (max-width: $tablet-width) {
+    .button-list {
+        flex-wrap: wrap;
+    }
+}
+

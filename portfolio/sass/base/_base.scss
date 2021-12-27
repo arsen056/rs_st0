@@ -100,3 +100,15 @@ a {
 a:hover {
     color: $color-gold;    
 }
+
+@media (max-width: $tablet-width) {
+    .wrapper {
+        max-width: $tablet-width;
+        margin: 0 auto;
+        padding: 20px 60px;
+    }
+
+    h1 {
+        @include font ($size: 3.2rem, $weight: 400);
+    }
+}
