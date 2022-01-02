@@ -17,6 +17,7 @@
 
     h4 {
         font-size: 20px;
+        font-weight: 700;
         padding-top: 80px;
     }
 
@@ -41,4 +42,34 @@
 
 .skills-card:nth-child(4) {
     background-image: url('./assets/svg/micro.svg');        
+}
+
+@media (max-width: $tablet-width) {
+    .skills {
+        .skills-cards {
+            justify-content: start;
+            column-gap: 44px;
+            row-gap: 58px;
+            margin-top: 68px;    
+        }
+    }
+
+
+    .skills-card {
+        width: 300px;
+        height: auto;
+        margin-top: 0px;
+        
+
+        h4 {
+            padding-top: 63px;
+            padding-bottom: 3px;
+            letter-spacing: 0.7px;
+        }
+
+        p {
+            padding-top: 0;
+            line-height: 1.16;
+        }
+    }
 }
