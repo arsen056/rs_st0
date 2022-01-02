@@ -1,0 +1,44 @@
+.skills {
+    .skills-cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.skills-card {
+    width: 320px;
+    height: 240px;  
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 62px 50px;
+    text-align: center;
+    margin-top: 78px;
+
+    h4 {
+        font-size: 20px;
+        padding-top: 80px;
+    }
+
+    p {
+        padding-top: 6px;
+        font-size: 18px;
+        line-height: 36px;
+    }
+}
+
+.skills-card:nth-child(1) {
+    background-image: url('./assets/svg/camera.svg');       
+}
+
+.skills-card:nth-child(2) {
+    background-image: url('./assets/svg/video.svg');       
+}
+
+.skills-card:nth-child(3) {
+    background-image: url('./assets/svg/image.svg');       
+}
+
+.skills-card:nth-child(4) {
+    background-image: url('./assets/svg/micro.svg');        
+}

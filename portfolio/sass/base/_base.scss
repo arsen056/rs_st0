@@ -1,0 +1,122 @@
+@import "../abstract/constants";
+@import "../abstract/mixins";
+@import "../base/buttons";
+@import "../base/footer";
+@import "../component/hero";
+@import "../component/skills";
+@import "../component/portfolio";
+@import "../component/video";
+@import "../component/price";
+@import "../component/contact";
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {    
+    font-family: 'Inter', sans-serif;
+    color: $font-white;    
+    font-size: 2rem;
+    background-color: $color-bg;
+}
+
+.wrapper {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    @include font ($size: 6rem, $weight: 700);
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+}
+
+input, textarea {    
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid $color-gold;
+    padding-left: 20px;    
+    color: $font-white;
+    &::placeholder {
+        font-family: inherit;
+        color: $color-gold;
+        font-size: 2rem;
+    } 
+    &:focus {
+        outline: 0;
+    }
+}
+
+.section-title {   
+    padding-top: 77px;
+    overflow: hidden;     
+    font-size: 4rem;
+    font-weight: 700;    
+    color: $color-gold;
+    text-align: center;
+    background: #000;
+    margin: 0 auto;
+
+    &::after, &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle; 
+        width: 275px;
+        height: 2px;
+        background-color: $color-gold;   
+        border: solid #000;
+        border-width: 0 20px;     
+    }   
+
+    &::after {
+        margin-right: -100%;
+    }
+    &::before {
+        margin-left: -100%;
+    }
+}
+
+.no-lines {    
+    text-align: right;
+    background: transparent;
+    padding-top: 69px;
+    padding-bottom: 55px;
+    padding-right: 223px;
+    &::after, &::before {
+        display: none;
+    }
+}
+
+a {
+    transition: color .2s linear;
+}
+
+a:hover {
+    color: $color-gold;    
+}
+
+@media (max-width: $tablet-width) {
+    .wrapper {
+        max-width: $tablet-width;
+        margin: 0 auto;
+        padding: 20px 60px;
+    }
+
+    h1 {
+        @include font ($size: 3.2rem, $weight: 400);
+    }
+
+    .section-title {
+        font-size: 3.2rem;
+        &::after, &::before {
+            width: 120px;
+            height: 2px;
+        } 
+    }
+}

@@ -1,0 +1,50 @@
+.price {
+    .price-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 80px;
+
+        .price-card {
+            position: relative;
+            border: 3px solid $color-gold;
+            width: 450px;
+            height: 505px;  
+            text-align: center;          
+            display: flex;
+            align-items: center;            
+            
+            flex-direction: column;
+            padding: 23px 105px;
+
+            span {
+                display: block;
+            }
+
+            .price-name {
+                font-family: Merriweather;
+                font-size: 28px;
+            }
+
+            .price-value {
+                font-family: Merriweather;
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: $color-gold;
+                padding: 15px 0 30px;
+            }
+
+            .price-description {
+                font-size: 1.8rem;
+                line-height: 36px;
+                padding-bottom: 35px;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .price-wrapper {
+        flex-direction: column;
+    }
+}
