@@ -56,7 +56,7 @@ input, textarea {
 .section-title {   
     padding-top: 77px;
     overflow: hidden;     
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 700;    
     color: $color-gold;
     text-align: center;
@@ -110,5 +110,13 @@ a:hover {
 
     h1 {
         @include font ($size: 3.2rem, $weight: 400);
+    }
+
+    .section-title {
+        font-size: 3.2rem;
+        &::after, &::before {
+            width: 120px;
+            height: 2px;
+        } 
     }
 }

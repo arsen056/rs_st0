@@ -459,7 +459,7 @@ a {
 
   .hero-content {
     padding-top: 75px;
-    padding-bottom: 330px;
+    padding-bottom: 135px;
     margin-left: 0;
   }
   .hero-content .hero-title {
@@ -675,7 +675,7 @@ input:focus, textarea:focus {
 .section-title {
   padding-top: 77px;
   overflow: hidden;
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 700;
   color: #bdae82;
   text-align: center;
@@ -730,6 +730,14 @@ a:hover {
     font-weight: 400;
     line-height: 3.2rem;
     font-style: normal;
+  }
+
+  .section-title {
+    font-size: 3.2rem;
+  }
+  .section-title::after, .section-title::before {
+    width: 120px;
+    height: 2px;
   }
 }
 .header {
@@ -793,6 +801,9 @@ a:hover {
   }
   .nav-list li:last-child {
     display: block;
+  }
+  .nav-list .nav-slash {
+    margin: 0 4px;
   }
 }
 
