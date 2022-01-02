@@ -15,8 +15,24 @@
 }
 
 @media (max-width: $tablet-width) {
-    .button-list {
-        flex-wrap: wrap;
+    .portfolio {
+        .button-list {
+            flex-wrap: wrap;
+            padding-top: 72px;
+            row-gap: 5px;
+        }
+
+        .portfolio-images {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -17px;
+
+            img {
+                width: 450px;
+            }
+        }
     }
+    
 }
 
