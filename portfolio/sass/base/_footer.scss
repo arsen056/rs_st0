@@ -23,13 +23,14 @@
         justify-content: space-between;
         align-items: center;
         column-gap: 20px;
-        
         a {
             display: block;
             width: 32px;
             height: 32px;
             background-repeat: no-repeat;
             background-position: center;
+            transition: 0.3s;
+            
             &:hover {
                 filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
                 contrast(87%);
