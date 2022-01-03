@@ -1,5 +1,6 @@
-console.log('- Вёрстка валидная +10');
-console.log('- Вёрстка семантическая +20');
-console.log('- Вёрстка соответствует макету +48');
-console.log('- Требования к css + 12');
-console.log('- Интерактивность, реализуемая через css +20');
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav');
+burger.addEventListener('click', () => {
+    burger.classList.toggle('burger-active');
+    nav.classList.toggle('nav-active');
+});

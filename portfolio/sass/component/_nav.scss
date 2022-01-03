@@ -11,17 +11,30 @@
 }
 
 @media (max-width: $tablet-width) {
-    .nav-list {
-        li {
-            display: none;
-        }
-        
-        li:last-child {
-            display: block;
-        }
+    .nav {
+        position: absolute;
+        right: -100%;
+        z-index: 10;
+        background-color: $color-bg;
+        transition: right .3s linear;
+        top: 0;
+        padding: 150px 0 0 128px;
+        width: 620px;
+        height: 100vh;
+        font-size: 3.4rem;
 
-        .nav-slash {
-            margin: 0 4px;
+        .nav-list {
+            flex-direction: column; 
+            row-gap: 50px;  
+           
+            li:last-child {
+                display: none;
+            }
+    
         }
     }
+
+    .nav-active {
+        right: 0%;
+    }       
 }

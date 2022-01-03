@@ -865,6 +865,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .header .logo {
   background-image: url("./assets/svg/logo.svg");
@@ -884,6 +885,17 @@ a:hover {
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
+  position: absolute;
+  right: 61px;
+  z-index: 11;
+}
+.header .burger-active {
+  display: none;
+  background-image: url("./assets/svg/close.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 45px;
+  height: 45px;
 }
 
 @media (max-width: 768px) {
@@ -914,14 +926,28 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .nav-list li {
+  .nav {
+    position: absolute;
+    right: -100%;
+    z-index: 10;
+    background-color: #000000;
+    transition: right 0.3s linear;
+    top: 0;
+    padding: 150px 0 0 128px;
+    width: 620px;
+    height: 100vh;
+    font-size: 3.4rem;
+  }
+  .nav .nav-list {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  .nav .nav-list li:last-child {
     display: none;
   }
-  .nav-list li:last-child {
-    display: block;
-  }
-  .nav-list .nav-slash {
-    margin: 0 4px;
+
+  .nav-active {
+    right: 0%;
   }
 }
 
