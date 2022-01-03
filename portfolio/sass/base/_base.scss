@@ -81,16 +81,7 @@ input, textarea {
     }
 }
 
-.no-lines {    
-    text-align: right;
-    background: transparent;
-    padding-top: 69px;
-    padding-bottom: 55px;
-    padding-right: 223px;
-    &::after, &::before {
-        display: none;
-    }
-}
+
 
 a {
     transition: color .2s linear;
@@ -118,4 +109,6 @@ a:hover {
             height: 2px;
         } 
     }
+
+    
 }

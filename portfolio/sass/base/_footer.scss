@@ -1,10 +1,12 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 131px;
-    font-style: normal;
-    
+    .footer-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 131px;
+        font-style: normal;
+
+    }  
 
     .git span {
         padding: 0 14px;
@@ -43,5 +45,30 @@
         } li:nth-child(4) a {            
             background-image: url("./assets/svg/pinterest.svg");
         }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .footer {
+        .footer-box {
+            display: block;     
+            margin: 0 auto;  
+            padding: 7px 0;     
+            text-align: center;       
+        }
+        .git {
+            display: block;
+            margin-bottom: 20px;
+        }
+        .rs {
+            display: block;
+            margin-left: 0px;
+            margin-bottom: 23px;
+            
+        }
+        .social-list {
+            justify-content: center;
+            padding-top: 5px;
+        }           
     }
 }
