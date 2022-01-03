@@ -383,6 +383,11 @@ a {
   bottom: 43px;
 }
 
+@media (max-width: 768px) {
+  .button-price {
+    bottom: 40px;
+  }
+}
 .footer {
   display: flex;
   justify-content: space-between;
@@ -470,6 +475,9 @@ a {
     line-height: 1.21;
   }
 }
+.skills .skills-title {
+  padding-top: 77px;
+}
 .skills .skills-cards {
   display: flex;
   justify-content: space-between;
@@ -536,6 +544,9 @@ a {
     line-height: 1.16;
   }
 }
+.portfolio .portfolio-title {
+  padding-top: 77px;
+}
 .portfolio .button-list {
   display: flex;
   justify-content: center;
@@ -564,6 +575,9 @@ a {
   .portfolio .portfolio-images img {
     width: 450px;
   }
+}
+.video .video-title {
+  padding-top: 77px;
 }
 .video .video-player {
   padding-top: 76px;
@@ -609,6 +623,9 @@ a {
     height: 418px;
   }
 }
+.price .price-title {
+  padding-top: 61px;
+}
 .price .price-wrapper {
   display: flex;
   justify-content: space-between;
@@ -647,8 +664,14 @@ a {
 }
 
 @media (max-width: 768px) {
-  .price-wrapper {
+  .price .price-wrapper {
     flex-direction: column;
+    justify-content: start;
+    row-gap: 50px;
+    padding-top: 72px;
+  }
+  .price .price-wrapper .price-card {
+    width: 420px;
   }
 }
 .contact .container {
@@ -726,7 +749,6 @@ input:focus, textarea:focus {
 }
 
 .section-title {
-  padding-top: 77px;
   overflow: hidden;
   font-size: 4rem;
   font-weight: 700;

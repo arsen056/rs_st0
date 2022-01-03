@@ -21,3 +21,9 @@
     position: absolute;
     bottom: 43px;
 }
+
+@media (max-width: $tablet-width) {
+    .button-price {
+        bottom: 40px;
+    }
+}
