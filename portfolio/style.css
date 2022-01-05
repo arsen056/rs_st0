@@ -773,6 +773,10 @@ body {
   padding: 20px 20px;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 h1 {
   font-family: "Merriweather", serif;
   font-size: 6rem;
@@ -921,22 +925,28 @@ a:hover {
   justify-content: space-between;
   column-gap: 33px;
 }
-.nav .nav-link-active {
+
+.nav-link-active {
   color: #bdae82;
+}
+
+.nav-link-lang {
+  display: none;
 }
 
 @media (max-width: 768px) {
   .nav {
-    position: absolute;
-    right: -100%;
+    position: fixed;
     z-index: 10;
     background-color: #000000;
-    transition: right 0.3s linear;
+    transition: right 0.4s linear;
     top: 0;
+    right: -100%;
     padding: 150px 0 0 128px;
     width: 620px;
     height: 100vh;
     font-size: 3.4rem;
+    overflow: auto;
   }
   .nav .nav-list {
     flex-direction: column;
@@ -946,8 +956,14 @@ a:hover {
     display: none;
   }
 
-  .nav-active {
-    right: 0%;
+  .nav.nav-active {
+    right: 0;
+  }
+
+  .nav-link-lang {
+    display: block;
+    position: absolute;
+    right: 144px;
   }
 }
 
