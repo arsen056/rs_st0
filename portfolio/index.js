@@ -9,12 +9,12 @@ burger.addEventListener('click', () => {
 
 });
 
-links.forEach(link => {
-    link.addEventListener('click', () => {
-        if (nav.classList.contains('nav-active')) {
-            document.body.classList.remove('lock');
-            burger.classList.remove('burger-active');
-            nav.classList.remove('nav-active');
-        }
-    })
-})
+nav.addEventListener('click', closeMenu);
+
+function closeMenu() {
+    if (nav.classList.contains('nav-active')) {
+        document.body.classList.remove('lock');
+        burger.classList.remove('burger-active');
+        nav.classList.remove('nav-active');
+    }
+}
