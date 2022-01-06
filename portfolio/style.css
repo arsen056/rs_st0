@@ -372,10 +372,15 @@ a {
   color: #ffffff;
 }
 
-.button-dark {
+.portfolio-btn {
   background-color: transparent;
   color: #bdae82;
   border: 2px solid #bdae82;
+}
+
+.portfolio-btn.btn-active {
+  color: #000;
+  background-color: #bdae82;
 }
 
 .button-price {
@@ -594,7 +599,7 @@ a {
     align-items: center;
     margin-bottom: -17px;
   }
-  .portfolio .portfolio-images img {
+  .portfolio .portfolio-images .portfolio-img {
     width: 450px;
   }
 }

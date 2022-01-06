@@ -11,10 +11,15 @@
     }
 }
 
-.button-dark {
+.portfolio-btn {
     background-color: transparent;
     color: $color-gold;
     border: 2px solid $color-gold;
+}
+
+.portfolio-btn.btn-active {
+    color: #000;
+    background-color: #bdae82;
 }
 
 .button-price {
