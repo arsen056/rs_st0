@@ -760,6 +760,14 @@ a:hover {
 .header .logo:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
+.header .nav-container {
+  display: flex;
+  column-gap: 31px;
+}
+.header .toggle-lang {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
 .header .burger {
   display: none;
   background-image: url("./assets/svg/burger.svg");
@@ -768,43 +776,13 @@ a:hover {
   height: 50px;
 }
 
-@media (max-width: 768px) {
-  .header {
-    background-position: -6px -30px;
-    background-size: 128%;
-    justify-content: start;
-  }
-  .header .nav {
-    margin-left: auto;
-    padding-right: 24px;
-  }
-  .header .nav .nav-link span {
-    margin: 0 5px;
-  }
-  .header .burger {
-    display: block;
-    margin-right: 5px;
-  }
-}
 .nav .nav-list {
   display: flex;
   justify-content: space-between;
-  column-gap: 33px;
+  column-gap: 30px;
 }
 .nav .nav-link-active {
   color: #bdae82;
-}
-
-@media (max-width: 768px) {
-  .nav-list li {
-    display: none;
-  }
-  .nav-list li:last-child {
-    display: block;
-  }
-  .nav-list .nav-slash {
-    margin: 0 4px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

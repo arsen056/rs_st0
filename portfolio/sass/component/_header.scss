@@ -21,6 +21,16 @@
         }
     }
 
+    .nav-container {
+        display: flex;
+        column-gap: 31px;
+    }
+
+    .toggle-lang {
+        font-weight: 700;      
+        letter-spacing: 2px;      
+    }
+
     .burger {
         display: none;
         background-image: url("./assets/svg/burger.svg");
@@ -29,28 +39,3 @@
         height: 50px;
     }
 }
-
-@media (max-width: $tablet-width) {
-    .header {
-        background-position: -6px -30px;
-        background-size: 128%;
-        justify-content: start;
-
-        .nav {
-            margin-left: auto;
-            padding-right: 24px;
-
-            .nav-link {
-                span {
-                    margin: 0 5px;
-                }
-            }
-        }
-
-        .burger {
-            display: block;
-            margin-right: 5px;
-        }
-    } 
-}
-
