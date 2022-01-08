@@ -470,6 +470,9 @@ a {
     line-height: 1.21;
   }
 }
+.skills .skills-title {
+  margin-top: 77px;
+}
 .skills .skills-cards {
   display: flex;
   justify-content: space-between;
@@ -483,7 +486,7 @@ a {
   background-repeat: no-repeat;
   background-size: 62px 50px;
   text-align: center;
-  margin-top: 78px;
+  margin-top: 46px;
 }
 .skills-card h4 {
   font-size: 20px;
@@ -511,11 +514,22 @@ a {
   background-image: url("./assets/svg/micro.svg");
 }
 
+.portfolio .portfolio-title {
+  margin-top: 76px;
+}
+.portfolio .portfolio-title:before {
+  width: 240px;
+  right: 57.9%;
+}
+.portfolio .portfolio-title:after {
+  width: 240px;
+  left: 58%;
+}
 .portfolio .button-list {
   display: flex;
   justify-content: center;
   column-gap: 5px;
-  padding-top: 78px;
+  padding-top: 45px;
   padding-bottom: 60px;
 }
 .portfolio .portfolio-images {
@@ -529,8 +543,11 @@ a {
     flex-wrap: wrap;
   }
 }
+.video .video-title {
+  margin-top: 76px;
+}
 .video .video-player {
-  padding-top: 76px;
+  padding-top: 44px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -556,11 +573,14 @@ a {
     width: 768px;
   }
 }
+.price .price-title {
+  margin-top: 78px;
+}
 .price .price-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 44px;
 }
 .price .price-wrapper .price-card {
   position: relative;
@@ -603,7 +623,7 @@ a {
   background-size: auto 700px;
   background-position: center center;
   background-repeat: no-repeat;
-  margin-top: 68px;
+  margin-top: 70px;
 }
 .contact .contact-wrapper {
   display: flex;
@@ -673,37 +693,33 @@ input:focus, textarea:focus {
 }
 
 .section-title {
-  padding-top: 77px;
   overflow: hidden;
   font-size: 4rem;
   font-weight: 700;
   color: #bdae82;
   text-align: center;
   background: #000;
-  margin: 0 auto;
+  position: relative;
 }
 .section-title::after, .section-title::before {
+  position: absolute;
+  display: block;
   content: "";
-  display: inline-block;
-  vertical-align: middle;
   width: 275px;
   height: 2px;
   background-color: #bdae82;
-  border: solid #000;
-  border-width: 0 20px;
+  right: 55.5%;
+  top: 50%;
 }
 .section-title::after {
-  margin-right: -100%;
-}
-.section-title::before {
-  margin-left: -100%;
+  left: 55.5%;
 }
 
 .no-lines {
   text-align: right;
   background: transparent;
-  padding-top: 69px;
-  padding-bottom: 55px;
+  padding-top: 35px;
+  padding-bottom: 22px;
   padding-right: 223px;
 }
 .no-lines::after, .no-lines::before {
@@ -760,6 +776,14 @@ a:hover {
 .header .logo:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
+.header .nav-container {
+  display: flex;
+  column-gap: 31px;
+}
+.header .toggle-lang {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
 .header .burger {
   display: none;
   background-image: url("./assets/svg/burger.svg");
@@ -768,43 +792,13 @@ a:hover {
   height: 50px;
 }
 
-@media (max-width: 768px) {
-  .header {
-    background-position: -6px -30px;
-    background-size: 128%;
-    justify-content: start;
-  }
-  .header .nav {
-    margin-left: auto;
-    padding-right: 24px;
-  }
-  .header .nav .nav-link span {
-    margin: 0 5px;
-  }
-  .header .burger {
-    display: block;
-    margin-right: 5px;
-  }
-}
 .nav .nav-list {
   display: flex;
   justify-content: space-between;
-  column-gap: 33px;
+  column-gap: 30px;
 }
 .nav .nav-link-active {
   color: #bdae82;
-}
-
-@media (max-width: 768px) {
-  .nav-list li {
-    display: none;
-  }
-  .nav-list li:last-child {
-    display: block;
-  }
-  .nav-list .nav-slash {
-    margin: 0 4px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

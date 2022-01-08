@@ -1,9 +1,22 @@
 .portfolio {
+    
+    .portfolio-title {
+        margin-top: 76px;
+    }
+    .portfolio-title:before {
+        width: 240px;
+        right: 57.9%;
+    }
+    .portfolio-title:after {
+        width: 240px;
+        left: 58%;
+    }
+    
     .button-list {
         display: flex;
         justify-content: center;
         column-gap: 5px;
-        padding-top: 78px;
+        padding-top: 45px;
         padding-bottom: 60px;
     }
 
