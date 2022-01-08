@@ -53,40 +53,37 @@ input, textarea {
     }
 }
 
-.section-title {   
-    padding-top: 77px;
+.section-title {    
     overflow: hidden;     
     font-size: 4rem;
     font-weight: 700;    
     color: $color-gold;
     text-align: center;
     background: #000;
-    margin: 0 auto;
+    
+    position: relative;
 
     &::after, &::before {
+        position: absolute;
+        display: block;
         content: "";
-        display: inline-block;
-        vertical-align: middle; 
         width: 275px;
         height: 2px;
-        background-color: $color-gold;   
-        border: solid #000;
-        border-width: 0 20px;     
+        background-color: $color-gold; 
+        right: 55.5%;
+        top: 50%;
     }   
 
     &::after {
-        margin-right: -100%;
-    }
-    &::before {
-        margin-left: -100%;
+        left: 55.5%;
     }
 }
 
 .no-lines {    
     text-align: right;
     background: transparent;
-    padding-top: 69px;
-    padding-bottom: 55px;
+    padding-top: 35px;
+    padding-bottom: 22px;
     padding-right: 223px;
     &::after, &::before {
         display: none;

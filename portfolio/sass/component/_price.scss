@@ -1,9 +1,13 @@
 .price {
+    .price-title {
+        margin-top: 78px;
+    }
+
     .price-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 80px;
+        padding-top: 44px;
 
         .price-card {
             position: relative;
