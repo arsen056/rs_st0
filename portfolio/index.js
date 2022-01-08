@@ -21,7 +21,6 @@ function closeMenu() {
 }
 
 // ----- Portfolio img -----
-
 const portfolioBtns = document.querySelector('.button-list');
 const portfolioImages = document.querySelectorAll('.portfolio-img');
 const portfolioButtons = document.querySelectorAll('.portfolio-btn');
@@ -40,4 +39,29 @@ function changeImage(event) {
         event.target.classList.add('btn-active');         
         portfolioImages.forEach((img, index) => img.src = `./assets/img/${target.dataset.season}/${index + 1}.jpg`);
     }
+}
+
+// ----- Translate -----
+import i18Obj from './js/translate.js';
+
+const enLang = document.querySelector('.nav-link-en');
+const ruLang = document.querySelector('.nav-link-ru');
+const langCont = document.querySelector('.lang-btn');
+const langs = document.querySelectorAll('.lang')
+
+langCont.addEventListener('click', changeColorLink);
+enLang.addEventListener('click', () => { getTranslate('en') });
+ruLang.addEventListener('click', () => { getTranslate('ru') });
+
+function getTranslate(lang) {    
+    langs.forEach(btn => { btn.classList.remove('nav-link-active') });
+
+    const words = document.querySelectorAll('[data-i18]');
+    words.forEach(txt => txt.textContent = i18Obj[lang][txt.dataset.i18]);
+}
+
+function changeColorLink(event) {  
+    if (event.target.classList.contains('lang')) {
+        event.target.classList.add('nav-link-active');
+    }    
 }

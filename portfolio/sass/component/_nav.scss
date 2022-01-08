@@ -10,10 +10,6 @@
     color: $color-gold;
 } 
 
-.nav-link-lang {
-    display: none;
-}
-
 @media (max-width: $tablet-width) {
     .nav {
         position: fixed;     
@@ -39,11 +35,5 @@
 
     .nav.nav-active {        
         right: 0;
-    }    
-    
-    .nav-link-lang {
-        display: block;
-        position: absolute;
-        right: 144px;
     }
 }

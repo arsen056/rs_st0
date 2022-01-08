@@ -651,7 +651,7 @@ a {
   }
 }
 .price .price-title {
-  padding-top: 61px;
+  padding-top: 78px;
 }
 .price .price-wrapper {
   display: flex;
@@ -686,8 +686,7 @@ a {
 }
 .price .price-wrapper .price-card .price-description {
   font-size: 1.8rem;
-  line-height: 36px;
-  padding-bottom: 35px;
+  line-height: 1.9;
 }
 
 @media (max-width: 768px) {
@@ -876,6 +875,11 @@ a:hover {
   align-items: center;
   position: relative;
 }
+.header .nav-box {
+  display: flex;
+  align-items: center;
+  column-gap: 33px;
+}
 .header .logo {
   background-image: url("./assets/svg/logo.svg");
   background-size: contain;
@@ -887,6 +891,13 @@ a:hover {
 }
 .header .logo:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+.header .lang-btn {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.header .lang-btn span:hover {
+  cursor: pointer;
 }
 .header .burger {
   display: none;
@@ -917,8 +928,9 @@ a:hover {
     margin-left: auto;
     padding-right: 24px;
   }
-  .header .nav .nav-link span {
-    margin: 0 5px;
+  .header .lang-btn {
+    position: absolute;
+    right: 137px;
   }
   .header .burger {
     display: block;
@@ -933,10 +945,6 @@ a:hover {
 
 .nav-link-active {
   color: #bdae82;
-}
-
-.nav-link-lang {
-  display: none;
 }
 
 @media (max-width: 768px) {
@@ -963,12 +971,6 @@ a:hover {
 
   .nav.nav-active {
     right: 0;
-  }
-
-  .nav-link-lang {
-    display: block;
-    position: absolute;
-    right: 144px;
   }
 }
 

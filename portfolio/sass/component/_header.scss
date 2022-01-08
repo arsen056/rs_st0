@@ -7,6 +7,11 @@
     align-items: center;
     position: relative;
     
+    .nav-box {
+        display: flex;
+        align-items: center;
+        column-gap: 33px;
+    }
     .logo {
         background-image: url("./assets/svg/logo.svg");
         background-size: contain;
@@ -19,6 +24,15 @@
         &:hover {
             filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
         contrast(87%);
+        }
+    }
+
+    .lang-btn {
+        font-weight: 700;
+        letter-spacing: 2px;
+
+        span:hover {
+            cursor: pointer;
         }
     }
 
@@ -51,13 +65,12 @@
 
         .nav {
             margin-left: auto;
-            padding-right: 24px;
+            padding-right: 24px;            
+        }
 
-            .nav-link {
-                span {
-                    margin: 0 5px;
-                }
-            }
+        .lang-btn {
+            position: absolute;
+            right: 137px;
         }
 
         .burger {
