@@ -1,13 +1,19 @@
 .portfolio {
-    .portfolio-title {
-        padding-top: 77px;
+    .portfolio-title:before {
+        width: 240px;
+        right: 57.9%;
     }
+    .portfolio-title:after {
+        width: 240px;
+        left: 58%;
+    }
+    
     .button-list {
         display: flex;
         justify-content: center;
         column-gap: 5px;
-        padding-top: 78px;
-        padding-bottom: 60px;
+        margin-top: 78px;
+        margin-bottom: 60px;
     }
 
     .portfolio-images {
@@ -19,9 +25,20 @@
 
 @media (max-width: $tablet-width) {
     .portfolio {
+        .portfolio-title {
+            margin-top: 78px;
+        }
+        .portfolio-title:before {
+            width: 140px;
+            right: 64%;
+        }
+        .portfolio-title:after {
+            width: 140px;
+            left: 64%;
+        }
         .button-list {
             flex-wrap: wrap;
-            padding-top: 72px;
+            margin-top: 70px;            
             row-gap: 5px;
         }
 

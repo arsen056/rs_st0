@@ -13,8 +13,9 @@
 @media (max-width: $tablet-width) {
     .nav {
         position: fixed;     
-        z-index: 10;
-        background-color: $color-bg;
+        z-index: 5;
+        background-color: var(--nav-bg);
+        color: var(--text-color);
         transition: right .4s linear;
         top: 0;
         right: -100%;
@@ -25,12 +26,13 @@
         overflow: auto;
         .nav-list {
             flex-direction: column; 
-            row-gap: 50px;  
-           
-            li:last-child {
-                display: none;
-            }    
+            row-gap: 50px;     
         }
+    }
+
+    .nav.light-theme-nav {
+        background-color: $light-bg;
+        color: $font-light-theme;
     }
 
     .nav.nav-active {        

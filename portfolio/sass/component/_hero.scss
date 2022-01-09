@@ -1,7 +1,20 @@
 .hero {
+    position: relative;
     background-image: url('./assets/img/header-bg.jpg');
     background-position: center -90px;
     background-repeat: no-repeat;
+    color: $font-white;
+}
+
+.toggle-theme {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    width: 32px;
+    height: 32px;
+    background-image: url('./assets/svg/change-theme.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .hero-content {
@@ -9,10 +22,6 @@
     padding-bottom: 330px;
     margin-left: 60px;
     width: 500px;
-
-    .hero-title {
-        padding-bottom: 20px;
-    }
 
     .hero-subtitle {
         @include font($size:2rem, $height: 2, $weight: 400);

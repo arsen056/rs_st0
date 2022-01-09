@@ -1,7 +1,4 @@
 .skills {    
-    .skills-title {
-        padding-top: 77px;
-    }
     .skills-cards {
         display: flex;
         justify-content: space-between;
@@ -49,6 +46,9 @@
 
 @media (max-width: $tablet-width) {
     .skills {
+        .skills-title {
+            margin-top: 78px;
+        }
         .skills-cards {
             justify-content: start;
             column-gap: 44px;

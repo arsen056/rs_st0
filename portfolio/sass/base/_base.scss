@@ -9,6 +9,29 @@
 @import "../component/price";
 @import "../component/contact";
 
+[data-theme="dark"] {
+    --body-color: #000;
+    --text-color: #fff;
+    --hover-color: #fff;
+    --title-color: #bdae82; 
+    --button-active-bg: #bdae82;
+    --button-color: #bdae82;
+    --button-active-color: #000;
+    --nav-bg: #000;
+    --burger-close: #fff; 
+}
+
+[data-theme="light"] {
+    --body-color: #fff;
+    --text-color: #000;
+    --title-color: #000;
+    --button-active-bg: #000;
+    --button-color: #000;
+    --button-active-color: #fff;
+    --nav-bg: #fff;
+    --burger-close: #000;
+}
+
 html {
     font-size: 10px;
     scroll-behavior: smooth;
@@ -16,9 +39,14 @@ html {
 
 body {    
     font-family: 'Inter', sans-serif;
-    color: $font-white;    
+    color: var(--text-color);    
     font-size: 2rem;
-    background-color: $color-bg;
+    background-color: var(--body-color);
+}
+
+.light-theme {
+    background-color: $light-bg;
+    color: $font-light-theme;
 }
 
 .wrapper {
@@ -57,32 +85,37 @@ input, textarea {
     }
 }
 
-.section-title {   
+.section-title {    
     overflow: hidden;     
     font-size: 4rem;
-    font-weight: 700;    
-    color: $color-gold;
-    text-align: center;
-    background: #000;
-    margin: 0 auto;
+    font-weight: 700;
+    color: var(--title-color); 
+    text-align: center; 
+    
+    position: relative;
 
     &::after, &::before {
+        position: absolute;
+        display: block;
         content: "";
-        display: inline-block;
-        vertical-align: middle; 
         width: 275px;
         height: 2px;
-        background-color: $color-gold;   
-        border: solid #000;
-        border-width: 0 20px;     
+        background-color: var(--title-color); 
+        right: 55.5%;
+        top: 50%;
     }   
 
     &::after {
-        margin-right: -100%;
+        left: 55.5%;
     }
-    &::before {
-        margin-left: -100%;
+}
+
+.title-light-theme {
+    color: $font-light-theme;
+    &::after, &::before {
+        background-color: $color-bg;
     }
+    
 }
 
 a {
@@ -109,7 +142,11 @@ a:hover {
         &::after, &::before {
             width: 120px;
             height: 2px;
+            right: 59%;
         } 
+        &::after {
+            left: 59%;
+        }
     }
 
     

@@ -1,11 +1,12 @@
 .footer {
+    background-color: $color-bg;
+    color: $font-white;
     .footer-box {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 131px;
-        font-style: normal;
-
+        font-style: normal; 
     }  
 
     .git span {
@@ -60,6 +61,7 @@
         .git {
             display: block;
             margin-bottom: 20px;
+            margin-left: -22px;
         }
         .rs {
             display: block;

@@ -1,7 +1,4 @@
 .price {
-    .price-title {
-        padding-top: 78px;
-    }
     .price-wrapper {
         display: flex;
         justify-content: space-between;
@@ -40,6 +37,7 @@
             .price-description {
                 font-size: 1.8rem;
                 line-height: 1.9;
+                min-width: 400px;
             }
         }
     }
@@ -47,14 +45,20 @@
 
 @media (max-width: $tablet-width) {
     .price {
+        .price-title {
+            margin-top: 62px;
+        }
         .price-wrapper {
             flex-direction: column;
             justify-content: start;
             row-gap: 50px;
-            padding-top: 72px;
+            padding-top: 44px;
     
             .price-card {
                 width: 420px;
+                .price-description {
+                    line-height: 2;
+                }
             }          
         }
     }

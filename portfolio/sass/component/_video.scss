@@ -1,7 +1,4 @@
 .video {
-    .video-title {
-        padding-top: 77px;
-    }
     .video-player {
         padding-top: 76px;
         position: relative;
@@ -39,8 +36,11 @@
 
 @media (max-width: $tablet-width) {
     .video {
+        .video-title {
+            margin-top: 78px;
+        }
         .video-player {
-            padding-top: 73px;
+            padding-top: 46px;
     
             .video-play {
                 width: 64px;
