@@ -575,6 +575,17 @@ a {
 }
 .price .price-title {
   margin-top: 78px;
+  margin-right: 24px;
+}
+.price .price-title:before {
+  right: 55.1%;
+  width: 267px;
+  top: 49%;
+}
+.price .price-title:after {
+  left: 55.2%;
+  width: 291px;
+  top: 49%;
 }
 .price .price-wrapper {
   display: flex;
@@ -783,6 +794,12 @@ a:hover {
 .header .toggle-lang {
   font-weight: 700;
   letter-spacing: 2px;
+  margin-right: -5px;
+}
+.header .toggle-lang span:hover {
+  cursor: pointer;
+  color: #bdae82;
+  transition: color 0.2s linear;
 }
 .header .burger {
   display: none;
@@ -797,7 +814,8 @@ a:hover {
   justify-content: space-between;
   column-gap: 30px;
 }
-.nav .nav-link-active {
+
+.nav-link-active {
   color: #bdae82;
 }
 
