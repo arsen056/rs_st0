@@ -28,7 +28,14 @@
 
     .toggle-lang {
         font-weight: 700;      
-        letter-spacing: 2px;      
+        letter-spacing: 2px;  
+        margin-right: -5px;           
+
+        span:hover {
+            cursor: pointer;
+            color: $color-gold;
+            transition: color 0.2s linear;
+        }
     }
 
     .burger {

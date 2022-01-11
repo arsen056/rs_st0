@@ -1,6 +1,18 @@
 .price {
     .price-title {
         margin-top: 78px;
+        margin-right: 24px;
+    }
+
+    .price-title:before {        
+        right: 55.1%;
+        width: 267px;
+        top: 49%;
+    }
+    .price-title:after {
+        left: 55.2%;
+        width: 291px;
+        top: 49%;        
     }
 
     .price-wrapper {
