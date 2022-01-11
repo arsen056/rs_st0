@@ -54,8 +54,6 @@ ruLang.addEventListener('click', () => { getTranslate('ru') });
 
 function getTranslate(lang) {    
     languague = lang;
-
-
     const words = document.querySelectorAll('[data-i18]');
     words.forEach(txt => txt.textContent = i18Obj[lang][txt.dataset.i18]);
 }
