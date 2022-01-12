@@ -388,7 +388,7 @@ a {
   bottom: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   .button-price {
     bottom: 40px;
   }
@@ -442,7 +442,7 @@ a {
   background-image: url("./assets/svg/pinterest.svg");
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   .footer .footer-box {
     display: block;
     margin: 0 auto;
@@ -504,7 +504,7 @@ a {
   padding-top: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   .hero {
     background-repeat: no-repeat;
     background-size: 128%;
@@ -565,7 +565,7 @@ a {
   background-image: url("./assets/svg/micro.svg");
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   .skills .skills-title {
     margin-top: 78px;
   }
@@ -613,7 +613,7 @@ a {
   gap: 25px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   .portfolio .portfolio-title {
     margin-top: 78px;
   }
@@ -670,7 +670,7 @@ a {
   opacity: 0.5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   .video .video-title {
     margin-top: 78px;
   }
@@ -724,7 +724,7 @@ a {
   min-width: 400px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   .price .price-title {
     margin-top: 62px;
   }
@@ -784,7 +784,7 @@ a {
   height: 100px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   .contact .contact-title {
     width: 100%;
     padding-right: 0px;
@@ -855,7 +855,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1440px;
+  max-width: 1439px;
   margin: 0 auto;
   padding: 20px 20px;
 }
@@ -925,7 +925,7 @@ a:hover {
   color: #bdae82;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   .wrapper {
     max-width: 768px;
     margin: 0 auto;
@@ -977,6 +977,9 @@ a:hover {
   font-weight: 700;
   letter-spacing: 2px;
 }
+.header .lang-btn span:last-child {
+  margin-left: 8px;
+}
 .header .lang-btn span:hover {
   cursor: pointer;
 }
@@ -984,7 +987,7 @@ a:hover {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   .header {
     background-position: -6px -30px;
     background-size: 128%;
@@ -1056,7 +1059,7 @@ a:hover {
   color: #bdae82;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   .nav {
     position: fixed;
     z-index: 5;

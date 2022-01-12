@@ -109,8 +109,7 @@ input, textarea {
     color: $font-light-theme;
     &::after, &::before {
         background-color: $color-bg;
-    }
-    
+    }    
 }
 
 a {
@@ -121,7 +120,7 @@ a:hover {
     color: $color-gold;    
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $content-width) {
     .wrapper {
         max-width: $tablet-width;
         margin: 0 auto;
@@ -137,7 +136,5 @@ a:hover {
         width: 55.9%;
         margin: 96px 22% 18px;
 
-    }
-
-    
+    }    
 }

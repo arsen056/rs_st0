@@ -10,7 +10,7 @@
     color: $color-gold;
 } 
 
-@media (max-width: $tablet-width) {
+@media (max-width: $content-width) {
     .nav {
         position: fixed;     
         z-index: 5;

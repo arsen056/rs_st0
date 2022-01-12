@@ -44,7 +44,7 @@
     background-image: url('./assets/svg/micro.svg');        
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $content-width) {
     .skills {
         .skills-title {
             margin-top: 78px;
