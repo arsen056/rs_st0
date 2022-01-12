@@ -19,6 +19,7 @@
     --button-active-color: #000;
     --nav-bg: #000;
     --burger-close: #fff; 
+    --title-bg: #000;
 }
 
 [data-theme="light"] {
@@ -30,6 +31,7 @@
     --button-active-color: #fff;
     --nav-bg: #fff;
     --burger-close: #000;
+    --title-bg: #fff;
 }
 
 html {
@@ -85,29 +87,22 @@ input, textarea {
     }
 }
 
-.section-title {    
-    overflow: hidden;     
+.section-title {
+    width: 50%;
+    text-align: center;
+    border-bottom: 2px solid var(--title-color);
+    margin: 10px 25% 18px;
     font-size: 4rem;
-    font-weight: 700;
-    color: var(--title-color); 
-    text-align: center; 
+    line-height: 0.1;
+    margin-top: 98px;
+
+}
+.section-title-inner {
+    color: var(--title-color);
+    background-color: var(--title-bg);
+    padding: 0 20px;
+    line-height: 0.1;
     
-    position: relative;
-
-    &::after, &::before {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 275px;
-        height: 2px;
-        background-color: var(--title-color); 
-        right: 55.5%;
-        top: 50%;
-    }   
-
-    &::after {
-        left: 55.5%;
-    }
 }
 
 .title-light-theme {
@@ -139,14 +134,9 @@ a:hover {
 
     .section-title {
         font-size: 3.2rem;
-        &::after, &::before {
-            width: 120px;
-            height: 2px;
-            right: 59%;
-        } 
-        &::after {
-            left: 59%;
-        }
+        width: 55.9%;
+        margin: 96px 22% 18px;
+
     }
 
     

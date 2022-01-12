@@ -385,7 +385,7 @@ a {
 
 .button-price {
   position: absolute;
-  bottom: 43px;
+  bottom: 40px;
 }
 
 @media (max-width: 768px) {
@@ -401,7 +401,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 131px;
+  padding-top: 39px;
   font-style: normal;
 }
 .footer .git span {
@@ -450,9 +450,15 @@ a {
     text-align: center;
   }
   .footer .git {
-    display: block;
-    margin-bottom: 20px;
-    margin-left: -22px;
+    display: flex;
+    justify-content: center;
+    column-gap: 23px;
+    margin-bottom: 18px;
+    margin-top: 2px;
+  }
+  .footer .git span {
+    padding: 0;
+    font-size: 2rem;
   }
   .footer .rs {
     display: block;
@@ -495,6 +501,7 @@ a {
   line-height: 2;
   font-style: normal;
   padding-bottom: 5px;
+  padding-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -509,11 +516,10 @@ a {
     padding-bottom: 135px;
     margin-left: 0;
   }
-  .hero-content .hero-title {
-    padding-bottom: 15px;
-  }
   .hero-content .hero-subtitle {
-    padding-bottom: 39px;
+    max-width: 390px;
+    padding-top: 15px;
+    padding-bottom: 38px;
     line-height: 1.21;
   }
 }
@@ -567,8 +573,8 @@ a {
     justify-content: start;
     column-gap: 44px;
     row-gap: 58px;
-    margin-top: 68px;
-    padding-bottom: 46px;
+    margin-top: 80px;
+    padding-bottom: 63px;
   }
 
   .skills-card {
@@ -598,7 +604,7 @@ a {
   display: flex;
   justify-content: center;
   column-gap: 5px;
-  margin-top: 78px;
+  margin-top: 98px;
   margin-bottom: 60px;
 }
 .portfolio .portfolio-images {
@@ -621,21 +627,20 @@ a {
   }
   .portfolio .button-list {
     flex-wrap: wrap;
-    margin-top: 70px;
+    margin-top: 87px;
     row-gap: 5px;
   }
   .portfolio .portfolio-images {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    margin-bottom: -17px;
   }
   .portfolio .portfolio-images .portfolio-img {
     width: 450px;
   }
 }
 .video .video-player {
-  padding-top: 76px;
+  padding-top: 78px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -670,7 +675,8 @@ a {
     margin-top: 78px;
   }
   .video .video-player {
-    padding-top: 46px;
+    padding-top: 69px;
+    padding-bottom: 17px;
   }
   .video .video-player .video-play {
     width: 64px;
@@ -685,7 +691,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 78px;
 }
 .price .price-wrapper .price-card {
   position: relative;
@@ -714,7 +720,7 @@ a {
 }
 .price .price-wrapper .price-card .price-description {
   font-size: 1.8rem;
-  line-height: 1.9;
+  line-height: 2;
   min-width: 400px;
 }
 
@@ -726,7 +732,7 @@ a {
     flex-direction: column;
     justify-content: start;
     row-gap: 50px;
-    padding-top: 44px;
+    padding-top: 68px;
   }
   .price .price-wrapper .price-card {
     width: 420px;
@@ -741,13 +747,12 @@ a {
 .contact .contact-title {
   text-align: right;
   background: transparent;
-  padding-top: 50px;
-  padding-bottom: 55px;
-  padding-right: 223px;
+  padding-top: 98px;
+  padding-bottom: 60px;
+  margin-left: 34%;
   color: #bdae82;
-}
-.contact .contact-title::after, .contact .contact-title::before {
-  display: none;
+  border: none;
+  margin-top: 80px;
 }
 .contact .container {
   background-image: url("./assets/img/contact-bg.jpg");
@@ -762,7 +767,7 @@ a {
 .contact .contact-wrapper {
   display: flex;
   justify-content: end;
-  padding-bottom: 185px;
+  padding-bottom: 195px;
 }
 
 .contact-form input, .contact-form textarea {
@@ -781,8 +786,9 @@ a {
 
 @media (max-width: 768px) {
   .contact .contact-title {
-    padding-top: 108px;
-    padding-right: 233px;
+    width: 100%;
+    padding-right: 0px;
+    margin: 54px 22% 43px;
     padding-bottom: 0;
     text-align: center;
     padding-right: 0;
@@ -816,6 +822,7 @@ a {
   --button-active-color: #000;
   --nav-bg: #000;
   --burger-close: #fff;
+  --title-bg: #000;
 }
 
 [data-theme=light] {
@@ -827,6 +834,7 @@ a {
   --button-active-color: #fff;
   --nav-bg: #fff;
   --burger-close: #000;
+  --title-bg: #fff;
 }
 
 html {
@@ -886,25 +894,20 @@ input:focus, textarea:focus {
 }
 
 .section-title {
-  overflow: hidden;
-  font-size: 4rem;
-  font-weight: 700;
-  color: var(--title-color);
+  width: 50%;
   text-align: center;
-  position: relative;
+  border-bottom: 2px solid var(--title-color);
+  margin: 10px 25% 18px;
+  font-size: 4rem;
+  line-height: 0.1;
+  margin-top: 98px;
 }
-.section-title::after, .section-title::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 275px;
-  height: 2px;
-  background-color: var(--title-color);
-  right: 55.5%;
-  top: 50%;
-}
-.section-title::after {
-  left: 55.5%;
+
+.section-title-inner {
+  color: var(--title-color);
+  background-color: var(--title-bg);
+  padding: 0 20px;
+  line-height: 0.1;
 }
 
 .title-light-theme {
@@ -938,14 +941,8 @@ a:hover {
 
   .section-title {
     font-size: 3.2rem;
-  }
-  .section-title::after, .section-title::before {
-    width: 120px;
-    height: 2px;
-    right: 59%;
-  }
-  .section-title::after {
-    left: 59%;
+    width: 55.9%;
+    margin: 96px 22% 18px;
   }
 }
 .header {
@@ -958,7 +955,7 @@ a:hover {
   position: relative;
   color: #ffffff;
 }
-.header .nav-box {
+.header .nav-container {
   display: flex;
   align-items: center;
   column-gap: 33px;
@@ -976,6 +973,7 @@ a:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 .header .lang-btn {
+  margin-right: -5px;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -994,6 +992,9 @@ a:hover {
   }
   .header .logo {
     margin-right: auto;
+  }
+  .header .lang-btn {
+    margin-right: -4px;
   }
   .header .burger {
     display: block;
@@ -1048,7 +1049,7 @@ a:hover {
 .nav .nav-list {
   display: flex;
   justify-content: space-between;
-  column-gap: 33px;
+  column-gap: 30px;
 }
 
 .nav-link-active {

@@ -36,7 +36,7 @@ const i18Obj = {
     'price-descripton-3-span-4': 'Readiness 1 weeks',
     'price-descripton-3-span-5': 'Make up, visage, hairstyle',
     'order': 'Order shooting',
-    'contact-me': 'Contact with me',
+    'contact-me': 'Contact me',
     'send-message': 'Send message'
   },
   'ru' : {

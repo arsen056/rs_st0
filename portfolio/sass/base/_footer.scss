@@ -5,7 +5,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 131px;
+        padding-top: 39px;
         font-style: normal; 
     }  
 
@@ -56,12 +56,21 @@
             display: block;     
             margin: 0 auto;  
             padding: 7px 0;     
-            text-align: center;       
+            text-align: center;     
+            
         }
         .git {
-            display: block;
-            margin-bottom: 20px;
-            margin-left: -22px;
+            display: flex;
+            justify-content: center;
+            column-gap: 23px;
+            margin-bottom: 18px;
+            margin-top: 2px;
+              
+            span {
+                padding: 0;
+                font-size: 2rem;
+            }
+            
         }
         .rs {
             display: block;

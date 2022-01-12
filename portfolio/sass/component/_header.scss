@@ -8,7 +8,7 @@
     position: relative;
     color: $font-white;
     
-    .nav-box {
+    .nav-container {
         display: flex;
         align-items: center;
         column-gap: 33px;
@@ -29,6 +29,7 @@
     }
 
     .lang-btn {
+        margin-right: -5px;
         font-weight: 700;
         letter-spacing: 2px;
 
@@ -50,6 +51,10 @@
 
         .logo {            
             margin-right: auto;
+        }
+
+        .lang-btn {
+            margin-right: -4px;
         }
         // Burger
         .burger {

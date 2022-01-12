@@ -83,12 +83,13 @@ function changeTheme (){
 
 // Function for local storage
 function changeLoadTheme(theme) {
+    currentTheme = theme;
     body.setAttribute('data-theme', theme);
 }
 
 // Save settings
 let languague = 'en';
-let currentTheme = 'light';
+let currentTheme = 'dark';
 function setLocalStorage() {
     localStorage.setItem('languague', languague);
     localStorage.setItem('currentTheme', currentTheme);

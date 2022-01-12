@@ -3,7 +3,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 80px;
+        padding-top: 78px;
 
         .price-card {
             position: relative;
@@ -36,7 +36,7 @@
 
             .price-description {
                 font-size: 1.8rem;
-                line-height: 1.9;
+                line-height: 2;
                 min-width: 400px;
             }
         }
@@ -52,7 +52,7 @@
             flex-direction: column;
             justify-content: start;
             row-gap: 50px;
-            padding-top: 44px;
+            padding-top: 68px;
     
             .price-card {
                 width: 420px;

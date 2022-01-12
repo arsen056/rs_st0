@@ -3,13 +3,12 @@
     .contact-title {    
         text-align: right;
         background: transparent;
-        padding-top: 50px;
-        padding-bottom: 55px;
-        padding-right: 223px;
+        padding-top: 98px;
+        padding-bottom: 60px;
+        margin-left: 34%;
         color: $color-gold;
-        &::after, &::before {
-            display: none;
-        }
+        border: none;
+        margin-top: 80px;
     }
     .container {
         background-image: url("./assets/img/contact-bg.jpg");        
@@ -25,7 +24,7 @@
     .contact-wrapper {
         display: flex;
         justify-content: end;
-        padding-bottom: 185px;
+        padding-bottom: 195px;
     }
 }
 
@@ -50,8 +49,9 @@
 @media (max-width: $tablet-width) {
     .contact {
         .contact-title {
-            padding-top: 108px;
-            padding-right: 233px;
+            width: 100%;
+            padding-right: 0px;
+            margin: 54px 22% 43px;
             padding-bottom: 0;
             text-align: center;
             padding-right: 0;
