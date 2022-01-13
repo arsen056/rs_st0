@@ -39,3 +39,16 @@
         right: 0;
     }
 }
+
+@media (max-width: 767px) {
+    .nav {
+        width: 350px;
+        padding: 30% 0 0 15%;
+    }
+}
+
+@media (max-width: 479px) {
+    .nav {
+        width: 250px;        
+    }
+}

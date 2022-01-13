@@ -56,3 +56,18 @@
     
 }
 
+@media (max-width: 479px) {
+    .portfolio {
+        .portfolio-title {
+            margin-top: 10px;
+        }
+
+        .button-list {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .portfolio-images .portfolio-img {
+            max-width: 300px;
+        }
+    }    
+}

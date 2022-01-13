@@ -52,6 +52,28 @@
                 height: 418px;
             }
         }
+    }    
+}
+
+@media(max-width: 767px) {
+    .video {
+        .video-player {
+            padding-top: 30px;
+            img {
+                height: fit-content;
+                max-width: 480px;
+            }
+        }
     }
-    
+}
+
+@media (max-width: 479px) {
+    .video {
+        .video-title {
+            margin-top: 30px;
+        }
+        .video-player img {
+            max-width: 320px;
+        }
+    }
 }

@@ -114,3 +114,17 @@
     } 
 }
 
+@media (max-width: 479px) {
+    .header {
+        background-position: -6px -10px;
+        .logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        .burger {
+            width: 30px;
+            height: 20px;
+        }
+    }
+}

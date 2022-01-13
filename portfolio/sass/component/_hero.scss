@@ -50,3 +50,30 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .hero-content {
+        padding-top: 30px;
+        max-width: 450px;
+        padding-bottom: 0px;
+
+        .hero-subtitle {
+            padding-bottom: 5px;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .hero {
+        background-position: -6px -80px;
+    }
+
+    .hero-content {
+        max-width: 280px;
+        padding-top: 0;
+    }
+
+    .toggle-theme {
+        bottom: 20px;
+    }
+}

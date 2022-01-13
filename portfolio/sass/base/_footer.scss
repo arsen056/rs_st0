@@ -84,3 +84,11 @@
         }           
     }
 }
+
+@media (max-width: 479px) {
+    .footer .social-list a {
+        width: 25px;
+        height: 25px;
+        background-size: cover;
+    }
+}
