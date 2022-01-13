@@ -1,11 +1,12 @@
 .footer {
+    background-color: $color-bg;
+    color: $font-white;
     .footer-box {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 131px;
-        font-style: normal;
-
+        padding-top: 39px;
+        font-style: normal; 
     }  
 
     .git span {
@@ -49,17 +50,27 @@
     }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $content-width) {
     .footer {
         .footer-box {
             display: block;     
             margin: 0 auto;  
             padding: 7px 0;     
-            text-align: center;       
+            text-align: center;     
+            
         }
         .git {
-            display: block;
-            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            column-gap: 23px;
+            margin-bottom: 18px;
+            margin-top: 2px;
+              
+            span {
+                padding: 0;
+                font-size: 2rem;
+            }
+            
         }
         .rs {
             display: block;
@@ -71,5 +82,13 @@
             justify-content: center;
             padding-top: 5px;
         }           
+    }
+}
+
+@media (max-width: 479px) {
+    .footer .social-list a {
+        width: 25px;
+        height: 25px;
+        background-size: cover;
     }
 }

@@ -1,9 +1,6 @@
 .video {
-    .video-title {
-        padding-top: 77px;
-    }
     .video-player {
-        padding-top: 76px;
+        padding-top: 78px;
         position: relative;
         display: flex;
         justify-content: center;
@@ -37,10 +34,14 @@
     }
 } 
 
-@media (max-width: $tablet-width) {
+@media (max-width: $content-width) {
     .video {
+        .video-title {
+            margin-top: 78px;
+        }
         .video-player {
-            padding-top: 73px;
+            padding-top: 69px;
+            padding-bottom: 17px;
     
             .video-play {
                 width: 64px;
@@ -51,6 +52,28 @@
                 height: 418px;
             }
         }
+    }    
+}
+
+@media(max-width: 767px) {
+    .video {
+        .video-player {
+            padding-top: 30px;
+            img {
+                height: fit-content;
+                max-width: 480px;
+            }
+        }
     }
-    
+}
+
+@media (max-width: 479px) {
+    .video {
+        .video-title {
+            margin-top: 30px;
+        }
+        .video-player img {
+            max-width: 320px;
+        }
+    }
 }

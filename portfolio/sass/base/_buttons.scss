@@ -11,19 +11,39 @@
     }
 }
 
-.button-dark {
+.portfolio-btn {
     background-color: transparent;
-    color: $color-gold;
+    color: var(--button-color);
     border: 2px solid $color-gold;
+}
+
+.portfolio-btn.btn-active {
+    color: var(--button-active-color);
+    background-color: var(--button-active-bg);
 }
 
 .button-price {
     position: absolute;
-    bottom: 43px;
+    bottom: 40px;
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $content-width) {
     .button-price {
         bottom: 40px;
     }
+}
+
+@media (max-width: 767px) {
+    .button {
+        width: 150px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 479px) {
+    .button {
+        width: 120px;
+        height: 30px;
+    }
+    
 }

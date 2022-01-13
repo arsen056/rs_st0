@@ -9,6 +9,31 @@
 @import "../component/price";
 @import "../component/contact";
 
+[data-theme="dark"] {
+    --body-color: #000;
+    --text-color: #fff;
+    --hover-color: #fff;
+    --title-color: #bdae82; 
+    --button-active-bg: #bdae82;
+    --button-color: #bdae82;
+    --button-active-color: #000;
+    --nav-bg: #000;
+    --burger-close: #fff; 
+    --title-bg: #000;
+}
+
+[data-theme="light"] {
+    --body-color: #fff;
+    --text-color: #000;
+    --title-color: #000;
+    --button-active-bg: #000;
+    --button-color: #000;
+    --button-active-color: #fff;
+    --nav-bg: #fff;
+    --burger-close: #000;
+    --title-bg: #fff;
+}
+
 html {
     font-size: 10px;
     scroll-behavior: smooth;
@@ -16,13 +41,18 @@ html {
 
 body {    
     font-family: 'Inter', sans-serif;
-    color: $font-white;    
+    color: var(--text-color);    
     font-size: 2rem;
-    background-color: $color-bg;
+    background-color: var(--body-color);
+}
+
+.light-theme {
+    background-color: $light-bg;
+    color: $font-light-theme;
 }
 
 .wrapper {
-    max-width: $content-width;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 20px 20px;
 }
@@ -57,32 +87,29 @@ input, textarea {
     }
 }
 
-.section-title {   
-    overflow: hidden;     
-    font-size: 4rem;
-    font-weight: 700;    
-    color: $color-gold;
+.section-title {
+    width: 50%;
     text-align: center;
-    background: #000;
-    margin: 0 auto;
+    border-bottom: 2px solid var(--title-color);
+    margin: 10px 25% 18px;
+    font-size: 4rem;
+    line-height: 0.1;
+    margin-top: 98px;
 
+}
+.section-title-inner {
+    color: var(--title-color);
+    background-color: var(--title-bg);
+    padding: 0 20px;
+    line-height: 0.1;
+    
+}
+
+.title-light-theme {
+    color: $font-light-theme;
     &::after, &::before {
-        content: "";
-        display: inline-block;
-        vertical-align: middle; 
-        width: 275px;
-        height: 2px;
-        background-color: $color-gold;   
-        border: solid #000;
-        border-width: 0 20px;     
-    }   
-
-    &::after {
-        margin-right: -100%;
-    }
-    &::before {
-        margin-left: -100%;
-    }
+        background-color: $color-bg;
+    }    
 }
 
 a {
@@ -93,7 +120,7 @@ a:hover {
     color: $color-gold;    
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $content-width) {
     .wrapper {
         max-width: $tablet-width;
         margin: 0 auto;
@@ -106,11 +133,32 @@ a:hover {
 
     .section-title {
         font-size: 3.2rem;
-        &::after, &::before {
-            width: 120px;
-            height: 2px;
-        } 
+        width: 55.9%;
+        margin: 96px 22% 18px;
+
+    }    
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 8px;
+    }
+    .wrapper {
+        max-width: $mobile-width;
+        padding: 20px 20px;
     }
 
-    
+    .section-title {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 479px) {
+    html {
+        font-size: 6px;
+    }
+    .wrapper {
+        max-width: $phone-width;
+        padding: 20px 20px;
+    }
 }

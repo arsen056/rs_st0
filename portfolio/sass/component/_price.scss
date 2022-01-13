@@ -1,12 +1,9 @@
 .price {
-    .price-title {
-        padding-top: 61px;
-    }
     .price-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 80px;
+        padding-top: 78px;
 
         .price-card {
             position: relative;
@@ -26,7 +23,7 @@
 
             .price-name {
                 font-family: Merriweather;
-                font-size: 28px;
+                font-size: 2.8rem;
             }
 
             .price-value {
@@ -39,24 +36,59 @@
 
             .price-description {
                 font-size: 1.8rem;
-                line-height: 36px;
-                padding-bottom: 35px;
+                line-height: 2;
+                min-width: 400px;
             }
         }
     }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $content-width) {
     .price {
+        .price-title {
+            margin-top: 62px;
+        }
         .price-wrapper {
             flex-direction: column;
             justify-content: start;
             row-gap: 50px;
-            padding-top: 72px;
+            padding-top: 68px;
     
             .price-card {
                 width: 420px;
+                .price-description {
+                    line-height: 2;
+                }
             }          
         }
     }
+}
+
+@media (max-width: 767px) {
+    .price {
+        .price-wrapper {
+            .price-card {
+                max-width: 380px;
+                max-height: 450px ;
+            }
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .price {
+        .price-title {
+            margin-top: 0;
+        }
+        .price-wrapper .price-card {
+            max-width: 280px;
+            max-height: 350px;
+            .price-description {
+                min-width: 170px;
+                
+            }
+        }
+    }
+    
+    
 }

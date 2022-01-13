@@ -1,7 +1,20 @@
 .hero {
+    position: relative;
     background-image: url('./assets/img/header-bg.jpg');
     background-position: center -90px;
     background-repeat: no-repeat;
+    color: $font-white;
+}
+
+.toggle-theme {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    width: 32px;
+    height: 32px;
+    background-image: url('./assets/svg/change-theme.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .hero-content {
@@ -10,17 +23,14 @@
     margin-left: 60px;
     width: 500px;
 
-    .hero-title {
-        padding-bottom: 20px;
-    }
-
     .hero-subtitle {
         @include font($size:2rem, $height: 2, $weight: 400);
         padding-bottom: 5px;
+        padding-top: 20px;
     }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $content-width) {
     .hero {
         background-repeat: no-repeat;
         background-size: 128%;
@@ -31,12 +41,39 @@
         padding-top: 75px;
         padding-bottom: 135px;
         margin-left: 0;
-        .hero-title {
-            padding-bottom: 15px;
-        }
+
         .hero-subtitle {
-            padding-bottom: 39px;
+            max-width: 390px;
+            padding-top: 15px;
+            padding-bottom: 38px;
             line-height: 1.21;
         }
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-content {
+        padding-top: 30px;
+        max-width: 450px;
+        padding-bottom: 0px;
+
+        .hero-subtitle {
+            padding-bottom: 5px;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .hero {
+        background-position: -6px -80px;
+    }
+
+    .hero-content {
+        max-width: 280px;
+        padding-top: 0;
+    }
+
+    .toggle-theme {
+        bottom: 20px;
     }
 }
