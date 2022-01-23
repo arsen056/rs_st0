@@ -1,10 +1,13 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 131px;
-    font-style: normal;
-    
+    background-color: $color-bg;
+    color: $font-white;
+    .footer-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 39px;
+        font-style: normal; 
+    }  
 
     .git span {
         padding: 0 14px;
@@ -21,13 +24,14 @@
         justify-content: space-between;
         align-items: center;
         column-gap: 20px;
-        
         a {
             display: block;
             width: 32px;
             height: 32px;
             background-repeat: no-repeat;
             background-position: center;
+            transition: 0.3s;
+            
             &:hover {
                 filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
                 contrast(87%);
@@ -43,5 +47,48 @@
         } li:nth-child(4) a {            
             background-image: url("./assets/svg/pinterest.svg");
         }
+    }
+}
+
+@media (max-width: $content-width) {
+    .footer {
+        .footer-box {
+            display: block;     
+            margin: 0 auto;  
+            padding: 7px 0;     
+            text-align: center;     
+            
+        }
+        .git {
+            display: flex;
+            justify-content: center;
+            column-gap: 23px;
+            margin-bottom: 18px;
+            margin-top: 2px;
+              
+            span {
+                padding: 0;
+                font-size: 2rem;
+            }
+            
+        }
+        .rs {
+            display: block;
+            margin-left: 0px;
+            margin-bottom: 23px;
+            
+        }
+        .social-list {
+            justify-content: center;
+            padding-top: 5px;
+        }           
+    }
+}
+
+@media (max-width: 479px) {
+    .footer .social-list a {
+        width: 25px;
+        height: 25px;
+        background-size: cover;
     }
 }

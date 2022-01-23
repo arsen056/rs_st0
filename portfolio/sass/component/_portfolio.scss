@@ -1,8 +1,4 @@
 .portfolio {
-    
-    .portfolio-title {
-        margin-top: 76px;
-    }
     .portfolio-title:before {
         width: 240px;
         right: 57.9%;
@@ -16,8 +12,9 @@
         display: flex;
         justify-content: center;
         column-gap: 5px;
-        padding-top: 45px;
-        padding-bottom: 60px;
+        margin-top: 98px;
+        margin-bottom: 60px;
+
     }
 
     .portfolio-images {
@@ -27,9 +24,51 @@
     }
 }
 
-@media (max-width: $tablet-width) {
-    .button-list {
-        flex-wrap: wrap;
+@media (max-width: $content-width) {
+    .portfolio {
+        .portfolio-title {
+            margin-top: 78px;
+        }
+        .portfolio-title:before {
+            width: 140px;
+            right: 64%;
+        }
+        .portfolio-title:after {
+            width: 140px;
+            left: 64%;
+        }
+        .button-list {
+            flex-wrap: wrap;
+            margin-top: 87px;            
+            row-gap: 5px;
+        }
+
+        .portfolio-images {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+            
+
+            .portfolio-img {
+                width: 450px;
+            }
+        }
     }
+    
 }
 
+@media (max-width: 479px) {
+    .portfolio {
+        .portfolio-title {
+            margin-top: 10px;
+        }
+
+        .button-list {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .portfolio-images .portfolio-img {
+            max-width: 300px;
+        }
+    }    
+}

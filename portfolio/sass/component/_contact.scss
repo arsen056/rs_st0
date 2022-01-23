@@ -1,16 +1,31 @@
 .contact {
+    background-color: var(--body-color);
+    .contact-title {    
+        text-align: right;
+        background: transparent;
+        padding-top: 98px;
+        padding-bottom: 60px;
+        margin-left: 34%;
+        color: $color-gold;
+        border: none;
+        margin-top: 80px;
+    }
     .container {
         background-image: url("./assets/img/contact-bg.jpg");        
         background-size: auto 700px;
         background-position: center center;
         background-repeat: no-repeat;
-        margin-top: 70px;
+        margin-top: 68px;
+        padding: 0px 20px;
+        max-width: 1440px;
+        margin: 0 auto;
+
     }
 
     .contact-wrapper {
         display: flex;
         justify-content: end;
-        padding-bottom: 185px;
+        padding-bottom: 195px;
     }
 }
 
@@ -30,4 +45,97 @@
     .input-text {
         height: 100px;
     }
+}
+
+@media (max-width: $content-width) {
+    .contact {
+        .contact-title {
+            width: 100%;
+            padding-right: 0px;
+            margin: 54px 22% 43px;
+            padding-bottom: 0;
+            text-align: center;
+            padding-right: 0;
+        }
+        .container {
+            background-size: 161%;
+            margin-top: 0;
+            background-position: center 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .contact-wrapper {
+            justify-content: center;
+            padding-top: 26px;
+            padding-bottom: 111px;
+            
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }        
+    }    
+}
+
+@media (max-width: 767px) {
+    .contact {
+        .contact-title {
+            padding-top: 40px;
+        }
+
+        .contact-wrapper {
+            padding-top: 0; 
+            padding-bottom: 30px;
+        }
+    }
+
+    .contact-form {
+        input {
+            max-width: 350px;
+            height: 35px;
+        }
+        textarea {
+            max-width: 350px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .contact .contact-wrapper {
+        padding-bottom: 22px;
+    }
+    .contact-form {
+        input {
+            max-width: 270px;
+        }
+        textarea {
+            max-width: 270px;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .contact {
+        .contact-title {
+            margin-bottom: 20px;
+        }
+
+        .contact-wrapper {
+            padding-bottom: 15px;
+        }
+        .contact-form {
+            input {
+                height: 20px;
+                max-width: 200px;
+            }
+            .input-text {
+                max-width: 200px;
+                height: 50px;
+            }
+        }
+    }    
 }
