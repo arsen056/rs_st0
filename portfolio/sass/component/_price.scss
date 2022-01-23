@@ -1,9 +1,25 @@
 .price {
+    .price-title {
+        margin-top: 78px;
+    }
+
+    .price-title:before {        
+        right: 55.1%;
+        width: 276px;
+        top: 49%;
+    }
+    .price-title:after {
+        left: 55.2%;
+        width: 276px;
+        top: 49%;        
+    }
+
     .price-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-top: 78px;
+
 
         .price-card {
             position: relative;

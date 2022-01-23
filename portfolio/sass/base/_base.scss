@@ -87,6 +87,7 @@ input, textarea {
     }
 }
 
+
 .section-title {
     width: 50%;
     text-align: center;
@@ -107,6 +108,7 @@ input, textarea {
 
 .title-light-theme {
     color: $font-light-theme;
+
     &::after, &::before {
         background-color: $color-bg;
     }    
