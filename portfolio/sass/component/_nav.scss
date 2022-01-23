@@ -3,9 +3,53 @@
         display: flex;
         justify-content: space-between;
         column-gap: 30px;
-    }    
+
+    }        
 }
 
 .nav-link-active {
-        color: $color-gold;
+    color: $color-gold;
+} 
+
+@media (max-width: $content-width) {
+    .nav {
+        position: fixed;     
+        z-index: 5;
+        background-color: var(--nav-bg);
+        color: var(--text-color);
+        transition: right .4s linear;
+        top: 0;
+        right: -100%;
+        padding: 150px 0 0 128px;
+        width: 620px;
+        height: 100vh;
+        font-size: 3.4rem;
+        overflow: auto;
+        .nav-list {
+            flex-direction: column; 
+            row-gap: 50px;     
+        }
+    }
+
+    .nav.light-theme-nav {
+        background-color: $light-bg;
+        color: $font-light-theme;
+    }
+
+    .nav.nav-active {        
+        right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav {
+        width: 350px;
+        padding: 30% 0 0 15%;
+    }
+
+
+@media (max-width: 479px) {
+    .nav {
+        width: 250px;        
+    }
 }
