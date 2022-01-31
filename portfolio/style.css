@@ -1137,9 +1137,16 @@ a:hover {
 .header .toggle-theme {
   width: 45px;
   height: 45px;
-  background-image: url("./assets/svg/toggle-theme.svg");
+  background-image: url("./assets/svg/dark-theme.svg");
   background-repeat: no-repeat;
   cursor: pointer;
+  transition: 0.3s linear;
+}
+.header .toggle-theme.theme-light {
+  background-image: url("./assets/svg/light-theme.svg");
+}
+.header .toggle-theme:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 .header .burger {
   display: none;

@@ -43,10 +43,20 @@
 
     .toggle-theme {
         width: 45px;
-        height: 45px;
-        background-image: url('./assets/svg/toggle-theme.svg');
+        height: 45px;       
+        background-image: url('./assets/svg/dark-theme.svg');
         background-repeat: no-repeat;
         cursor: pointer;
+        transition: .3s linear;
+    }
+
+    .toggle-theme.theme-light {
+        background-image: url('./assets/svg/light-theme.svg');
+    }
+    
+    .toggle-theme:hover {
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+        contrast(87%);
     }
 
     .burger {

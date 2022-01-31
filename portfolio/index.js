@@ -68,6 +68,7 @@ function changeColorLink(event) {
 // ----- light theme ----- 
 const theme = document.querySelector('.toggle-theme');
 const body = document.querySelector('body');
+const toggleThemeBtn = document.querySelector('.toggle-theme')
 
 theme.addEventListener('click', changeTheme);
 
@@ -75,9 +76,12 @@ function changeTheme (){
     if (body.getAttribute('data-theme') === 'light') { 
         body.setAttribute('data-theme', 'dark')
         currentTheme = 'dark';
+        toggleThemeBtn.classList.add('theme-light');
+
     } else {
         body.setAttribute('data-theme', 'light')
         currentTheme = 'light';
+        toggleThemeBtn.classList.remove('theme-light');
     }
 }
 
