@@ -36,10 +36,17 @@
         span:last-child {
             margin-left: 8px;
         }
-
         span:hover {
             cursor: pointer;
         }
+    }
+
+    .toggle-theme {
+        width: 45px;
+        height: 45px;
+        background-image: url('./assets/svg/toggle-theme.svg');
+        background-repeat: no-repeat;
+        cursor: pointer;
     }
 
     .burger {
@@ -120,6 +127,12 @@
         .logo {
             width: 30px;
             height: 30px;
+        }
+
+        .toggle-theme {
+            width: 25px;
+            height: 25px;
+            background-size: contain;
         }
 
         .burger {

@@ -497,17 +497,6 @@ a {
   color: #ffffff;
 }
 
-.toggle-theme {
-  position: absolute;
-  right: 20px;
-  bottom: 40px;
-  width: 32px;
-  height: 32px;
-  background-image: url("./assets/svg/change-theme.svg");
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
 .hero-content {
   padding-top: 170px;
   padding-bottom: 330px;
@@ -560,10 +549,6 @@ a {
   .hero-content {
     max-width: 280px;
     padding-top: 0;
-  }
-
-  .toggle-theme {
-    bottom: 20px;
   }
 }
 .skills .skills-cards {
@@ -971,7 +956,7 @@ a {
   --body-color: #fff;
   --text-color: #000;
   --title-color: #000;
-  --button-active-bg: #000;
+  --button-active-bg: #bdae82;
   --button-color: #000;
   --button-active-color: #fff;
   --nav-bg: #fff;
@@ -1149,6 +1134,13 @@ a:hover {
 .header .lang-btn span:hover {
   cursor: pointer;
 }
+.header .toggle-theme {
+  width: 45px;
+  height: 45px;
+  background-image: url("./assets/svg/toggle-theme.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 .header .burger {
   display: none;
 }
@@ -1222,6 +1214,11 @@ a:hover {
   .header .logo {
     width: 30px;
     height: 30px;
+  }
+  .header .toggle-theme {
+    width: 25px;
+    height: 25px;
+    background-size: contain;
   }
   .header .burger {
     width: 30px;
