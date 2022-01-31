@@ -531,6 +531,7 @@ a {
     line-height: 1.21;
   }
 }
+
 @media (max-width: 767px) {
   .hero-content {
     padding-top: 30px;
@@ -564,7 +565,7 @@ a {
   background-repeat: no-repeat;
   background-size: 62px 50px;
   text-align: center;
-  margin-top: 78px;
+  margin-top: 46px;
 }
 .skills-card h4 {
   font-size: 2rem;
@@ -1123,6 +1124,7 @@ a:hover {
 .header .logo:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
+
 .header .lang-btn {
   margin-right: -5px;
   font-weight: 700;
@@ -1134,6 +1136,7 @@ a:hover {
 .header .lang-btn span:hover {
   cursor: pointer;
 }
+
 .header .toggle-theme {
   width: 45px;
   height: 45px;
@@ -1148,6 +1151,7 @@ a:hover {
 .header .toggle-theme:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
+
 .header .burger {
   display: none;
 }
@@ -1230,8 +1234,23 @@ a:hover {
   .header .burger {
     width: 30px;
     height: 20px;
+
   }
 }
+@media (max-width: 479px) {
+  .header {
+    background-position: -6px -10px;
+  }
+  .header .logo {
+    width: 30px;
+    height: 30px;
+  }
+  .header .burger {
+    width: 30px;
+    height: 20px;
+  }
+}
+
 .nav .nav-list {
   display: flex;
   justify-content: space-between;
