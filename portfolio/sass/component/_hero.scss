@@ -6,17 +6,6 @@
     color: $font-white;
 }
 
-.toggle-theme {
-    position: absolute;
-    right: 20px;
-    bottom: 40px;
-    width: 32px;
-    height: 32px;
-    background-image: url('./assets/svg/change-theme.svg');
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
 .hero-content {
     padding-top: 170px;
     padding-bottom: 330px;
@@ -71,9 +60,5 @@
     .hero-content {
         max-width: 280px;
         padding-top: 0;
-    }
-
-    .toggle-theme {
-        bottom: 20px;
     }
 }
