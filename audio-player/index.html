@@ -5,13 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
     <title>Audio player</title>
 </head>
 
 <body>
-    <audio src=""></audio>
+    <audio src="./assets/audio/beyonce.mp3"></audio>
+    <div class="background"></div>
+    <div class="player-container">
+        <div class="cover"></div>
+        <div class="audio-player">
+            <div class="player-row">
+                <div class="play-toggle"></div>
+                <div class="title-container">
+                    <h2 class="singer">Dua Lipa</h2>
+                    <span class="title-song">Don't Start Now</span>
+                </div>
+                <div class="prev-next-container">
+                    <div class="btn-prev-next prev"></div>
+                    <div class="btn-prev-next next"></div>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="time current-time">0:00</div>
+                <div class="time duration-time">3:53</div>
+                <input type="range" class="progress" min="0" max="" value="0">
+            </div>
 
+        </div>
+    </div>
+
+
+
+    <script src="./main.js"></script>
 </body>
 
 </html>
