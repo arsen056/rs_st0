@@ -52,7 +52,6 @@ body {
     background: -webkit-linear-gradient(45deg, rgb(40, 40, 40), rgb(133, 133, 133));
     height: 25%;
     border-radius: 0 0 9px 9px;
-
 }
 
 .player-row {
@@ -141,5 +140,5 @@ body {
     width: 7px;
     height: 10px;
     border-radius: 10px;
-    cursor: ew-resize;    
+    cursor: pointer;    
 }
