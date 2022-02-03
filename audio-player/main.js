@@ -18,9 +18,7 @@ audio.onloadedmetadata = function(){
     audioDuration = audio.duration;
 }
 
-// Init music
-const musics = ["Don't Start Now", "Don't Hurt Yourself"];
-const singers = ["Dua Lipa", "Beyonce"];
+const musics = [["Dua Lipa", "Don't Start Now",], ["Beyonce", "Don't Hurt Yourself"], ["Любэ", "Солдат"]]
 let musicIndex = 0;
 
 function initMusic(music, nameSinger) {
@@ -30,7 +28,7 @@ function initMusic(music, nameSinger) {
     background.style.backgroundImage = `url('./assets/img/cover${musicIndex + 1}.png')`;
     cover.style.backgroundImage = `url('./assets/img/cover${musicIndex + 1}.png')`;    
 }
-initMusic(musics[0], singers[0]);
+initMusic(musics[0][1], musics[0][0]);
 
 // Play pause audio
 function playAudio() {
@@ -44,22 +42,27 @@ function togglePlay() {
     if (!isPlay) {
         isPlay = true;
         playAudio();  
-        playPause.classList.toggle('pause');      
+        playPause.classList.toggle('pause'); 
+        cover.classList.toggle('enlargement');
+           
     } else {
         isPlay = false;
         pauseAudio();
         playPause.classList.toggle('pause');
+        cover.classList.toggle('enlargement');
     }
 }
 playPause.addEventListener('click', togglePlay);
 
 // Next music
-function nextMusic() {
+function nextMusic() {    
     musicIndex++;
     if (musicIndex > musics.length - 1) {
         musicIndex = 0;
     }
-    initMusic(musics[musicIndex], singers[musicIndex]);
+    initMusic(musics[musicIndex][1], musics[musicIndex][0]);
+    addPause(); 
+      
 }
 next.addEventListener('click', nextMusic);
 
@@ -69,9 +72,19 @@ function prevMusic() {
     if (musicIndex < 0) {
         musicIndex = musics.length - 1;
     }
-    initMusic(musics[musicIndex], singers[musicIndex]);
+    initMusic(musics[musicIndex][1], musics[musicIndex][0]);
+    addPause();
 }
 prev.addEventListener('click', prevMusic);
+
+function addPause() {
+    playAudio();
+    isPlay = true;
+    if (!playPause.classList.contains('pause')) playPause.classList.add('pause');
+    if (isPlay) {
+        cover.classList.add('enlargement');
+    }
+}
 
 // Move progress
 function moveProgress() {
@@ -90,7 +103,6 @@ function rewind(e) {
 progress.addEventListener('click', rewind);
 
 // Get time from num
-
 function getTimeFromNum(num) {
     let seconds = parseInt(num);
     let minutes = parseInt(seconds / 60);
