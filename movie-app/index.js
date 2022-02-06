@@ -9,7 +9,7 @@ search.addEventListener('keydown', function(e) {
         getData();
     }
 })
-async function getData() {
+async function getData() {    
     const res = await fetch(url);
     const data = await res.json();
     const moviesArray = data.results;
@@ -29,6 +29,16 @@ async function getData() {
             
             </div>
     </div>`
+    })
+
+    // Add color for rating
+    const rating = document.querySelectorAll('.movie-rating');
+    rating.forEach(element => {
+        if (element.textContent > 8) {
+            element.classList.add('green');
+        } else if (element.textContent < 5) {
+            element.classList.add('red');
+        }
     })
 }
 getData();
