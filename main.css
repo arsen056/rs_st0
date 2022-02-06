@@ -1,0 +1,140 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #21254B;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header {
+    background-color: #373B69;
+    padding: 20px 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    background-image: url('./svg/logo.svg');
+    background-repeat: no-repeat;    
+    width: 100px;
+    transition: opacity 0.3s linear;
+}
+
+.logo:hover {
+    opacity: 0.5;
+}
+
+.search {
+    font-family: inherit;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 15px 20px;
+    border: 2px solid #22254B;
+    font-size: 16px;
+}
+
+.search:focus {
+    outline: none;
+    background-color: #22254b;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+    padding: 30px;
+    max-width: 1580px;
+    margin: 0 auto;
+}
+
+.movie-item {
+    position: relative;
+    width: 300px;
+    background-color: #373B6A;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.movie-poster {
+    width: 100%;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.movie-title {    
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+.movie-rating {
+    color: #DEA25D; 
+    padding: 8px;
+    background-color: #21254B;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.movie-rating.green {
+    color: lightgreen;
+}
+
+.movie-rating.red {
+    color: red;
+}
+
+.movie-description {
+    visibility: hidden;
+    position: absolute;
+    bottom: -100%;
+    padding: 20px;
+    background-color: #fff;    
+    transition: all .4s linear;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    overflow-y: auto;
+    max-height: 100%;
+
+}
+
+.movie-item:hover .movie-description {
+    bottom: 0;
+    visibility: visible;    
+}
+
+.footer {
+    background-color: #373B69;
+    padding: 20px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s linear;
+}
+
+.footer a:hover {
+    opacity: 0.5;
+}
+
+.logo-rs {
+    background-image: url('./svg/rs_school_js.svg');
+    background-repeat: no-repeat;   
+    background-size: contain; 
+    width: 150px;
+    height: 40px;    
+}
