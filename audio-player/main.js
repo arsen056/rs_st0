@@ -88,10 +88,15 @@ function addPause() {
 
 // Move progress
 function moveProgress() {
-        const percent = (audio.currentTime / audioDuration) * 100;
-        progress.value = percent;
-        let timeupdate = getTimeFromNum(audio.currentTime);
-        currentTimeAudio.textContent = timeupdate;
+    const percent = (audio.currentTime / audioDuration) * 100;
+    progress.value = percent;
+    let timeupdate = getTimeFromNum(audio.currentTime);
+    currentTimeAudio.textContent = timeupdate;
+    console.log(progress.value)
+    console.log(progress.value === 100)
+    if(progress.value == 100) {
+        nextMusic();
+    }
 }
 audio.addEventListener('timeupdate', moveProgress);
 
