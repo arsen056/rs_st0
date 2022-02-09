@@ -26,9 +26,19 @@ body {
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.2s linear;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .cell:hover {
     background-color: rgba(241, 243, 244, 1);
     opacity: 0.5;
+}
+
+.cross {
+    background-image: url('./svg/cross.svg');
+}
+
+.circle {
+    background-image: url('./svg/circle.svg');
 }
