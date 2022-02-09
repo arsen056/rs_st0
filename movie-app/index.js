@@ -1,11 +1,11 @@
-let url = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1';
+let url = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=c9cdb67f43f870d92570157eadb203ea&page=1';
 const movies = document.querySelector('.movies');
 const search = document.querySelector('.search');
 
 search.addEventListener('keydown', function(e) {
     if (e.keyCode === 13) {
         e.preventDefault();
-        url = `https://api.themoviedb.org/3/search/movie?query=${this.value}&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1`;
+        url = `https://api.themoviedb.org/3/search/movie?query=${this.value}&api_key=c9cdb67f43f870d92570157eadb203ea&page=1`;
         getData();
     }
 })
