@@ -1,4 +1,8 @@
 const area = document.querySelector('.area');
+const overlay = document.querySelector('.overlay'),
+    modal = document.querySelector('.modal'),
+    winnerText = document.querySelector('.modal-text'),
+    reset = document.querySelector('.reset');
 let move = 0;
 
 area.addEventListener('click', addTicTacToe);
@@ -31,9 +35,35 @@ function check() {
 
     for (let i = 0; i < win.length; i++) {
         if (cells[win[i][0]].classList.contains('cross') && cells[win[i][1]].classList.contains('cross') && cells[win[i][2]].classList.contains('cross')) {
-            console.log('win X')
+            showModal('Победили крестики');
         } else if (cells[win[i][0]].classList.contains('circle') && cells[win[i][1]].classList.contains('circle') && cells[win[i][2]].classList.contains('circle')) {
-            console.log('win 0')
+            showModal('Победили нолики');
         } 
     }
+}
+
+function showModal(winner) {
+    overlay.classList.add('overlay-open');
+    modal.classList.add('modal-open');
+    winnerText.innerHTML = winner
+}
+
+
+reset.addEventListener('click', closeModal);
+
+function closeModal() {
+    area.innerHTML = `
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    `
+    overlay.classList.remove('overlay-open');
+    modal.classList.remove('modal-open');
+    location.reload();
 }
