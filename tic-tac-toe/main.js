@@ -3,24 +3,32 @@ const overlay = document.querySelector('.overlay'),
     modal = document.querySelector('.modal'),
     winnerText = document.querySelector('.modal-text'),
     reset = document.querySelector('.reset');
+    rating = document.querySelector('.rating');
 let move = 0;
+let countMoveX = 0;
+let countMove0 = 0;
+let countWinX = 0;
+let countWin0 = 0;
+let countGame = 0;
+let winners = [];
 
 area.addEventListener('click', addTicTacToe);
 function addTicTacToe(event) {
-    if (event.target.className = 'cell') {
-        if (move % 2 == 0) {
+    if (event.target.className === 'cell') {
+        if (move % 2 === 0) {
             event.target.classList.add('cross');
+            countMoveX++;
         } else {
             event.target.classList.add('circle');
-        }
-        move++;
+            countMove0++;
+        }        
         check();
+        move++;        
     }
 }
 
-function moveComputer() {}
-
 function check() {
+    let result = 'Ничья!';
     const cells = document.querySelectorAll('.cell');
     const win = [
         [0, 1, 2],
@@ -35,22 +43,53 @@ function check() {
 
     for (let i = 0; i < win.length; i++) {
         if (cells[win[i][0]].classList.contains('cross') && cells[win[i][1]].classList.contains('cross') && cells[win[i][2]].classList.contains('cross')) {
-            showModal('Победили крестики');
+            result = `Победили крестики! Количетство ходов: ${countMoveX}`;
+            winners.push('X');
+            countWinX++;
+            countGame++;
+            showModal(result);
         } else if (cells[win[i][0]].classList.contains('circle') && cells[win[i][1]].classList.contains('circle') && cells[win[i][2]].classList.contains('circle')) {
-            showModal('Победили нолики');
-        } 
+            result = `Победили нолики! Количетство ходов: ${countMove0}`;
+            winners.push('O');
+            countWin0++;
+            countGame++;
+            showModal(result);           
+        } else if (move === 8) {
+            showModal(result);
+            winners.push('Ничья');
+        }
+    }    
+}
+
+function showModal(winner) {    
+    overlay.classList.add('overlay-open');
+    modal.classList.add('modal-open');
+    winnerText.innerHTML = winner;
+    showRating(winners);
+}
+
+function showRating(winners) {
+    if (winners.length > 10) { winners.shift() }
+    rating.innerHTML = "";    
+    const game = document.querySelector('.game');
+    const winner = document.querySelector('.winner');
+    for (let i = 1; i < winners.length; i++) {        
+        let tdGame = document.createElement('td');
+        let tdWinner = document.createElement('td');
+
+        tdGame.innerHTML = `${i}`;
+        tdWinner.innerHTML = `${winners[i]}`;
+        game.prepend(tdGame);
+        winner.prepend(tdWinner);
+
+
+        // let p = document.createElement('p');
+        // p.innerHTML = `Игра ${i}: ${winners[i]}`;
+        // rating.prepend(p);
     }
 }
 
-function showModal(winner) {
-    overlay.classList.add('overlay-open');
-    modal.classList.add('modal-open');
-    winnerText.innerHTML = winner
-}
-
-
 reset.addEventListener('click', closeModal);
-
 function closeModal() {
     area.innerHTML = `
         <div class="cell"></div>
@@ -65,5 +104,25 @@ function closeModal() {
     `
     overlay.classList.remove('overlay-open');
     modal.classList.remove('modal-open');
-    location.reload();
+    move = 0;
+    countMoveX = 0;
+    countMove0 = 0;
 }
+
+function setWinners(wins) {
+    winners = wins;
+}
+
+function setLocalStorage() {
+    localStorage.setItem('countWinX', countWinX);
+    localStorage.setItem('countWin0', countWin0);
+    localStorage.setItem('countGame', countGame);
+    localStorage.setItem('winners', winners);
+}
+window.addEventListener('beforeunload', setLocalStorage);
+
+function getLocalStorage() {
+    const winners = localStorage.getItem('winners').split(',');
+    setWinners(winners);
+}
+window.addEventListener('load', getLocalStorage);

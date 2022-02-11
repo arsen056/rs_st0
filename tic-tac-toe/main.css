@@ -99,3 +99,19 @@ body {
 .reset:hover {
     opacity: 0.5;
 }
+
+@media (max-width:768px) {
+    .modal {
+        width: 300px;
+        height: 280px;
+        margin: 20% auto;
+    }
+}
+
+@media (max-width:320px) {
+    .modal {
+        width: 300px;
+        height: 280px;
+        margin: 30% auto;
+    }
+}
