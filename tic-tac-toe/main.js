@@ -47,45 +47,46 @@ function check() {
             winners.push('X');
             countWinX++;
             countGame++;
+            checkCountWin(winners);
             showModal(result);
         } else if (cells[win[i][0]].classList.contains('circle') && cells[win[i][1]].classList.contains('circle') && cells[win[i][2]].classList.contains('circle')) {
             result = `Победили нолики! Количетство ходов: ${countMove0}`;
             winners.push('O');
             countWin0++;
             countGame++;
+            checkCountWin(winners);
             showModal(result);           
-        } else if (move === 8) {
-            showModal(result);
+        } else if (move === 8) {            
             winners.push('Ничья');
+            checkCountWin(winners);
+            showModal(result);
+            break;
         }
-    }    
+    }        
+}
+
+function checkCountWin(winners) {
+    if (winners.length > 10) {
+        winners.shift();
+    }
 }
 
 function showModal(winner) {    
     overlay.classList.add('overlay-open');
     modal.classList.add('modal-open');
     winnerText.innerHTML = winner;
+    console.log(winners);
     showRating(winners);
 }
 
 function showRating(winners) {
-    if (winners.length > 10) { winners.shift() }
-    rating.innerHTML = "";    
     const game = document.querySelector('.game');
     const winner = document.querySelector('.winner');
-    for (let i = 1; i < winners.length; i++) {        
-        let tdGame = document.createElement('td');
-        let tdWinner = document.createElement('td');
-
-        tdGame.innerHTML = `${i}`;
-        tdWinner.innerHTML = `${winners[i]}`;
-        game.prepend(tdGame);
-        winner.prepend(tdWinner);
-
-
-        // let p = document.createElement('p');
-        // p.innerHTML = `Игра ${i}: ${winners[i]}`;
-        // rating.prepend(p);
+    game.innerHTML = "";
+    winner.innerHTML = "";
+    for (let i = 0; i < winners.length; i++) {   
+        game.innerHTML += `<td>${i + 1}</td>`;
+        winner.innerHTML += `<td>${winners[i]}</td>`;       
     }
 }
 
@@ -122,7 +123,14 @@ function setLocalStorage() {
 window.addEventListener('beforeunload', setLocalStorage);
 
 function getLocalStorage() {
-    const winners = localStorage.getItem('winners').split(',');
-    setWinners(winners);
+    const winnersStorage = localStorage.getItem('winners');
+    if (winnersStorage === null) {
+        console.log('Игр не сыграно');
+    } else if (winnersStorage.length === 0) {
+        console.log("Игр не сыграно");
+    } else {
+        setWinners(winnersStorage.split(','));
+    }
+
 }
 window.addEventListener('load', getLocalStorage);
