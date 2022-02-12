@@ -3,7 +3,7 @@ const overlay = document.querySelector('.overlay'),
     modal = document.querySelector('.modal'),
     winnerText = document.querySelector('.modal-text'),
     reset = document.querySelector('.reset');
-    rating = document.querySelector('.rating');
+    resetRating = document.querySelector('.reset-rating')
 let move = 0;
 let countMoveX = 0;
 let countMove0 = 0;
@@ -82,12 +82,27 @@ function showModal(winner) {
 function showRating(winners) {
     const game = document.querySelector('.game');
     const winner = document.querySelector('.winner');
-    game.innerHTML = "";
-    winner.innerHTML = "";
-    for (let i = 0; i < winners.length; i++) {   
-        game.innerHTML += `<td>${i + 1}</td>`;
+    const total = document.querySelector('.total');
+    game.innerHTML = "<td>Игра</td>";
+    winner.innerHTML = "<td>Победитель</td>";
+    total.innerHTML = '';
+    for (let i = winners.length - 1; i > -1; i--) {   
+        if ((i + 1) === winners.length) {
+            game.innerHTML += `<td>Текущая</td>`;
+        } else {
+            game.innerHTML += `<td>${i + 1}</td>`;
+        }        
         winner.innerHTML += `<td>${winners[i]}</td>`;       
     }
+    total.innerHTML = `Всего игр: ${winners.length}. Крестики победили ${countWinX} раз, нолики ${countWin0}.`;
+}
+
+resetRating.addEventListener('click', resetStat);
+function resetStat() {
+    closeModal();
+    winners = [];
+    countWinX = 0;
+    countWin0 = 0; 
 }
 
 reset.addEventListener('click', closeModal);
@@ -110,8 +125,10 @@ function closeModal() {
     countMove0 = 0;
 }
 
-function setWinners(wins) {
+function setWinners(wins, winX, win0) {
     winners = wins;
+    countWinX = winX;
+    countWin0 = win0;
 }
 
 function setLocalStorage() {
@@ -124,12 +141,14 @@ window.addEventListener('beforeunload', setLocalStorage);
 
 function getLocalStorage() {
     const winnersStorage = localStorage.getItem('winners');
+    const winX = localStorage.getItem('countWinX'),
+          win0 = localStorage.getItem('countWin0');
     if (winnersStorage === null) {
         console.log('Игр не сыграно');
     } else if (winnersStorage.length === 0) {
         console.log("Игр не сыграно");
     } else {
-        setWinners(winnersStorage.split(','));
+        setWinners(winnersStorage.split(','), winX, win0);
     }
 
 }
