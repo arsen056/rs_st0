@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
 body {
     width: 100%;
     height: 100%;
     background-color: bisque;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .area {
@@ -119,6 +122,41 @@ body {
 .results tr td {
     border: 1px solid #333;
     padding: 10px;
+}
+
+.footer {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer a:hover {
+    opacity: 0.7;
+}
+
+.rss-logo {
+    width: 120px;
+    height: 120px;
+    background-image: url('./svg/logo-rss.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.rss-logo:hover {
+    opacity: 0.7;
 }
 
 @media (max-width:768px) {
