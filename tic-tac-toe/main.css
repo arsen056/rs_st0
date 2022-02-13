@@ -7,6 +7,13 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
+.player-info {
+    margin-top: 175px;
+    text-align: center;
+    font-size: 20px;
+}
+
 .area {
     position: absolute;
     top: 40%;
@@ -67,7 +74,7 @@ body {
 
 .modal {
     background-color:aliceblue;
-    width: 600px;
+    max-width: 900px;
     height: 500px;
     opacity: 0;
     transition: all 0.3s linear;

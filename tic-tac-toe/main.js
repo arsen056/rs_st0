@@ -5,7 +5,10 @@ const area = document.querySelector('.area'),
     reset = document.querySelector('.reset');
     resetRating = document.querySelector('.reset-rating'),
     audioX = document.querySelector('.audio-x'),
-    audio0 = document.querySelector('.audio-0');
+    audio0 = document.querySelector('.audio-0'),
+    player = document.querySelector('.player');
+    playerX = 'X';
+    player0 = 'O';
 let move = 0,
     countMoveX = 0,
     countMove0 = 0,
@@ -19,12 +22,14 @@ function addTicTacToe(event) {
     if (event.target.className === 'cell') {
         if (move % 2 === 0) {
             event.target.classList.add('cross');
+            player.innerHTML = player0;
             countMoveX++;
-            audioX.play();
+            audioX.play();            
         } else {
             event.target.classList.add('circle');
+            player.innerHTML = playerX; 
             countMove0++;
-            audio0.play();
+            audio0.play();            
         }        
         check();
         move++;        
@@ -127,6 +132,7 @@ function closeModal() {
     move = 0;
     countMoveX = 0;
     countMove0 = 0;
+    player.innerHTML = playerX;
 }
 
 function setWinners(wins, winX, win0) {
