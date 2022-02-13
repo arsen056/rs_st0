@@ -1,3 +1,13 @@
+console.log(`
+    Вёрстка +10
+    При кликах по игровому полю по очереди отображаются крестики и нолики. Первая фигура всегда крестик +10
+    Игра завершается, когда три фигуры выстроились в ряд по вертикали, горизонтали или диагонали +10
+    По окончанию игры выводится её результат - выигравшая фигура и количество ходов от начала игры до её завершения +10
+    Результаты последних 10 игр сохраняются в local storage. Есть таблица рекордов, в которой отображаются результаты предыдущих 10 игр +10
+    Анимации или звуки, или настройки игры. Баллы начисляются за любой из перечисленных пунктов +10 - Щелчок при нажатии
+    Итого 60 баллов
+    `);
+
 const area = document.querySelector('.area'),
     overlay = document.querySelector('.overlay'),
     modal = document.querySelector('.modal'),
@@ -84,7 +94,6 @@ function showModal(winner) {
     overlay.classList.add('overlay-open');
     modal.classList.add('modal-open');
     winnerText.innerHTML = winner;
-    console.log(winners);
     showRating(winners);
 }
 
