@@ -1,16 +1,18 @@
-const area = document.querySelector('.area');
-const overlay = document.querySelector('.overlay'),
+const area = document.querySelector('.area'),
+    overlay = document.querySelector('.overlay'),
     modal = document.querySelector('.modal'),
     winnerText = document.querySelector('.modal-text'),
     reset = document.querySelector('.reset');
-    resetRating = document.querySelector('.reset-rating')
-let move = 0;
-let countMoveX = 0;
-let countMove0 = 0;
-let countWinX = 0;
-let countWin0 = 0;
-let countGame = 0;
-let winners = [];
+    resetRating = document.querySelector('.reset-rating'),
+    audioX = document.querySelector('.audio-x'),
+    audio0 = document.querySelector('.audio-0');
+let move = 0,
+    countMoveX = 0,
+    countMove0 = 0,
+    countWinX = 0,
+    countWin0 = 0,
+    countGame = 0,
+    winners = [];
 
 area.addEventListener('click', addTicTacToe);
 function addTicTacToe(event) {
@@ -18,9 +20,11 @@ function addTicTacToe(event) {
         if (move % 2 === 0) {
             event.target.classList.add('cross');
             countMoveX++;
+            audioX.play();
         } else {
             event.target.classList.add('circle');
             countMove0++;
+            audio0.play();
         }        
         check();
         move++;        
