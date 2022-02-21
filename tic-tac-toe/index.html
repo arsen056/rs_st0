@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="shortcut icon" href="./svg/tictactoe.ico" type="image/x-icon">
+    <title>Tic tac toe</title>
+</head>
+
+<body>
+    <audio class="audio-x" src="./audio/X.mp3"></audio>
+    <audio class="audio-0" src="./audio/O.mp3"></audio>
+    <div class="wrapper">
+        <p class="player-info">Ход: <span class="player">X</span></p>
+        <div class="area">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="modal">
+            <p class="modal-text"></p>
+            <table class="results">
+                <tr class="game"></tr>
+                <tr class="winner"></tr>
+            </table>
+            <p class="total"></p>
+            <p class="desription">* Информация отображается за последние 10 игр</p>
+            <div class="buttons">
+                <button class="button reset">Начать заново</button>
+                <button class="button reset-rating">Сбросить статистику</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="wrapper">
+            <a href="https://github.com/arsen056/" target="_blank">2022 Github: arsen056</a>
+            <a class="rss-logo" href="https://rs.school/js-stage0/" target="_blank"></a>
+        </div>
+
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>
