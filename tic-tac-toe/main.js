@@ -9,6 +9,7 @@ console.log(`
     `);
 
 const area = document.querySelector('.area'),
+    body = document.querySelector('body'),
     overlay = document.querySelector('.overlay'),
     modal = document.querySelector('.modal'),
     winnerText = document.querySelector('.modal-text'),
@@ -34,11 +35,13 @@ function addTicTacToe(event) {
             event.target.classList.add('cross');
             player.innerHTML = player0;
             countMoveX++;
+            body.style.backgroundColor = '#3189FE';
             audioX.play();            
         } else {
             event.target.classList.add('circle');
             player.innerHTML = playerX; 
             countMove0++;
+            body.style.backgroundColor = '#6DC887';
             audio0.play();            
         }        
         check();
@@ -142,6 +145,7 @@ function closeModal() {
     countMoveX = 0;
     countMove0 = 0;
     player.innerHTML = playerX;
+    body.style.backgroundColor = 'bisque';
 }
 
 function setWinners(wins, winX, win0) {
